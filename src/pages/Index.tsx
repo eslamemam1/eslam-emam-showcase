@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import { LanguageProvider } from '../contexts/LanguageContext';
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import ProjectsSection from '../components/ProjectsSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import RecentWorkSection from '../components/RecentWorkSection';
+import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    // Update title and meta description
+    document.title = "Eslam Emam | Full Stack Engineer";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Eslam Emam - Full Stack Engineer portfolio showcasing projects, skills, and services.");
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <LanguageProvider>
+      <Navbar />
+      <HeroSection />
+      <ProjectsSection />
+      <TestimonialsSection />
+      <RecentWorkSection />
+      <ContactSection />
+      <Footer />
+    </LanguageProvider>
   );
 };
 
