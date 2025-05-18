@@ -22,14 +22,18 @@ const Index = () => {
 
   return (
     <LanguageProvider>
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <TestimonialsSection />
-      <RecentWorkSection />
-      <ContactSection />
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <HeroSection />
+          <AboutSection />
+          <ProjectsSection />
+          <TestimonialsSection />
+          <RecentWorkSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
     </LanguageProvider>
   );
 };

@@ -15,30 +15,30 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-portfolio-dark/90 z-0"></div>
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3')] bg-cover bg-center bg-no-repeat opacity-20 z-[-1]"></div>
       
-      <div className="container mx-auto px-4 md:px-8 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+      <div className="section-inner px-4 sm:px-6 md:px-8 lg:px-12 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
           {/* Text Content */}
-          <div className="text-left order-2 md:order-1">
+          <div className="text-left order-2 md:order-1 space-y-6 md:space-y-8">
             <ScrollReveal>
-              <p className="text-portfolio-green text-lg md:text-xl mb-2">
+              <p className="text-portfolio-green text-lg md:text-xl mb-2 md:mb-3">
                 {t('hero.greeting')}
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
                 {t('hero.name')}
               </h1>
-              <h2 className="text-2xl md:text-3xl font-medium text-white/80 mb-6">
+              <h2 className="text-2xl md:text-3xl font-medium text-white/80 mb-6 md:mb-8">
                 {t('hero.title')}
               </h2>
             </ScrollReveal>
             
             <ScrollReveal className="delay-200">
-              <p className="text-lg md:text-xl text-white/70 mb-8">
+              <p className="text-lg md:text-xl text-white/70 mb-8 md:mb-10">
                 {t('hero.description')}
               </p>
             </ScrollReveal>
             
             <ScrollReveal className="delay-300">
-              <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
                 <Button 
                   className="bg-portfolio-green hover:bg-portfolio-green/90 text-white px-8 py-6 text-lg"
                   onClick={() => window.location.href = '#projects'}

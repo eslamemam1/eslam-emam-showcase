@@ -70,7 +70,10 @@ const ScrollReveal = ({
     <div 
       ref={sectionRef} 
       className={`reveal transition-all ease-out ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ 
+        transitionDelay: `${delay}ms`,
+        transitionProperty: 'transform, opacity'
+      }}
     >
       {children}
     </div>

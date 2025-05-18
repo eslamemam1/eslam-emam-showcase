@@ -16,20 +16,20 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-portfolio-light">
-      <div className="container mx-auto px-4 md:px-8">
+    <section id="about" className="section section-light">
+      <div className="section-inner">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="section-title text-center">
             <span className="text-portfolio-dark">About</span>
             <span className="text-portfolio-green"> Me</span>
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mt-12 md:mt-16">
           {/* About Text */}
-          <div>
+          <div className="space-y-6 md:space-y-8">
             <ScrollReveal direction="right" delay={200}>
-              <h3 className="text-2xl font-bold mb-4 text-portfolio-dark">
+              <h3 className="text-2xl font-bold mb-6 text-portfolio-dark">
                 Full Stack Engineer with a passion for creating impactful applications
               </h3>
               
@@ -40,13 +40,13 @@ const AboutSection = () => {
                 an exceptional user experience.
               </p>
               
-              <p className="text-portfolio-gray mb-6">
+              <p className="text-portfolio-gray mb-8">
                 I'm proficient in front-end frameworks like React and Vue.js, as well as
                 back-end technologies like Node.js and Python. I have experience with database
                 systems including MongoDB, PostgreSQL, and Firebase.
               </p>
               
-              <div className="flex gap-4 mt-8">
+              <div className="flex flex-wrap gap-4 mt-8">
                 <a 
                   href="#projects" 
                   className="bg-portfolio-green hover:bg-portfolio-green/90 text-white px-6 py-3 rounded-md transition-colors"
@@ -65,9 +65,9 @@ const AboutSection = () => {
           </div>
           
           {/* Skills */}
-          <div>
+          <div className="mt-8 md:mt-0">
             <ScrollReveal direction="left" delay={400}>
-              <h3 className="text-2xl font-bold mb-6 text-portfolio-dark">
+              <h3 className="text-2xl font-bold mb-8 text-portfolio-dark">
                 My Skills
               </h3>
               

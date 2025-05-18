@@ -39,31 +39,31 @@ const RecentWorkSection = () => {
 
   return (
     <section className="section section-dark">
-      <div className="container mx-auto">
+      <div className="section-inner">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('recentWork.title')}</h2>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="section-title">{t('recentWork.title')}</h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">{t('recentWork.subtitle')}</p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {workItems.map((item, index) => (
             <ScrollReveal key={item.id} className={`delay-${index * 100}`}>
-              <div className="group relative overflow-hidden rounded-lg cursor-pointer h-64">
+              <div className="group relative overflow-hidden rounded-lg cursor-pointer h-64 md:h-72">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-90 transition-opacity group-hover:opacity-100"></div>
-                <div className="absolute bottom-0 left-0 p-6 w-full transition-all duration-300 group-hover:bottom-2">
-                  <div className="mb-2">
+                <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full transition-all duration-300 group-hover:bottom-2">
+                  <div className="mb-3">
                     <span className="inline-block bg-portfolio-green/90 text-white text-xs px-3 py-1 rounded-full">
                       {item.category}
                     </span>
                   </div>
-                  <h3 className="text-xl text-white font-medium mb-2">{item.title}</h3>
+                  <h3 className="text-xl text-white font-medium mb-4">{item.title}</h3>
                   <Button 
                     variant="outline" 
                     size="sm"

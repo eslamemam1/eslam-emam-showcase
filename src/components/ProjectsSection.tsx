@@ -38,16 +38,16 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="section section-dark py-24">
-      <div className="container mx-auto">
+    <section id="projects" className="section section-dark">
+      <div className="section-inner">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('projects.title')}</h2>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto">{t('projects.subtitle')}</p>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="section-title">{t('projects.title')}</h2>
+            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">{t('projects.subtitle')}</p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} className={`delay-${index * 100}`}>
               <Card className="bg-portfolio-dark border border-white/10 overflow-hidden h-full flex flex-col">
@@ -58,16 +58,16 @@ const ProjectsSection = () => {
                     className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
                   />
                 </div>
-                <CardHeader>
+                <CardHeader className="p-6 pb-3">
                   <CardTitle className="text-xl text-white">{project.title}</CardTitle>
-                  <CardDescription className="text-white/60">
+                  <CardDescription className="text-white/60 mt-2">
                     {project.tech}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="flex-grow">
+                <CardContent className="p-6 pt-3 pb-6 flex-grow">
                   <p className="text-white/80">{project.description}</p>
                 </CardContent>
-                <CardFooter className="flex justify-between space-x-2">
+                <CardFooter className="p-6 pt-0 flex justify-between gap-4">
                   <Button 
                     variant="default" 
                     className="bg-portfolio-green hover:bg-portfolio-green/90 flex-1"
@@ -88,10 +88,10 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <ScrollReveal className="text-center mt-12">
+        <ScrollReveal className="text-center mt-12 md:mt-16">
           <Button 
             variant="outline" 
-            className="border-white/20 hover:bg-white/10 text-white px-8"
+            className="border-white/20 hover:bg-white/10 text-white px-8 py-3"
             onClick={() => window.location.href = '#'}
           >
             {t('projects.viewAll')}
