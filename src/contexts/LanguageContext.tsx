@@ -42,9 +42,9 @@ const translations = {
     "projects.github": "View Code",
     
     // Project 1
-    "project1.title": "E-Commerce Platform",
-    "project1.description": "A full-featured online shopping platform with user authentication, product catalog, cart functionality, and payment processing.",
-    "project1.tech": "React, Node.js, MongoDB, Stripe",
+    "project1.title": "Caf-Sports",
+    "project1.description": "CAF SPORTS One of the leading companies in Egypt and United Arab Emirates specialized in the field of sports construction and Artificial flooring.",
+    "project1.tech": "React, Tailwind Css",
     
     // Project 2
     "project2.title": "Social Media Dashboard",
@@ -124,9 +124,9 @@ const translations = {
     "projects.github": "عرض الكود",
     
     // Project 1
-    "project1.title": "منصة التجارة الإلكترونية",
-    "project1.description": "منصة تسوق متكاملة عبر الإنترنت مع مصادقة المستخدم، كتالوج المنتجات، وظائف عربة التسوق، ومعالجة الدفع.",
-    "project1.tech": "React، Node.js، MongoDB، Stripe",
+    "project1.title": "كاف سبورتس ",
+    "project1.description": "نحن كاف سبورتس إحدى الشركات الرائدة في مصر والإمارات العربية المتحدة المتخصصة في مجال البناء الرياضي والأرضيات الصناعية.",
+    "project1.tech": "React,Tailwind Css",
     
     // Project 2
     "project2.title": "لوحة تحكم وسائل التواصل الاجتماعي",

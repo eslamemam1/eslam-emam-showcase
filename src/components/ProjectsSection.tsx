@@ -1,8 +1,15 @@
-
-import { useLanguage } from '../contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import ScrollReveal from './ScrollReveal';
+import { useLanguage } from "../contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import ScrollReveal from "./ScrollReveal";
 
 const ProjectsSection = () => {
   const { t } = useLanguage();
@@ -10,40 +17,47 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: t('project1.title'),
-      description: t('project1.description'),
-      tech: t('project1.tech'),
-      imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3',
-      projectUrl: '#',
-      githubUrl: '#',
+      title: t("project1.title"),
+      description: t("project1.description"),
+      tech: t("project1.tech"),
+      imageUrl:
+        "/imges/caf.png",
+      projectUrl: "https://caf-sports.com/",
+      githubUrl: "#",
     },
     {
       id: 2,
-      title: t('project2.title'),
-      description: t('project2.description'),
-      tech: t('project2.tech'),
-      imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3',
-      projectUrl: '#',
-      githubUrl: '#',
+      title: t("project2.title"),
+      description: t("project2.description"),
+      tech: t("project2.tech"),
+      imageUrl:
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
+      projectUrl: "#",
+      githubUrl: "#",
     },
     {
       id: 3,
-      title: t('project3.title'),
-      description: t('project3.description'),
-      tech: t('project3.tech'),
-      imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3',
-      projectUrl: '#',
-      githubUrl: '#',
+      title: t("project3.title"),
+      description: t("project3.description"),
+      tech: t("project3.tech"),
+      imageUrl:
+        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3",
+      projectUrl: "#",
+      githubUrl: "#",
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <section id="projects" className="section section-dark">
       <div className="section-inner">
         <ScrollReveal>
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="section-title">{t('projects.title')}</h2>
-            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">{t('projects.subtitle')}</p>
+            <h2 className="section-title">{t("projects.title")}</h2>
+            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+              {t("projects.subtitle")}
+            </p>
           </div>
         </ScrollReveal>
 
@@ -59,7 +73,9 @@ const ProjectsSection = () => {
                   />
                 </div>
                 <CardHeader className="p-6 pb-3">
-                  <CardTitle className="text-xl text-white">{project.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">
+                    {project.title}
+                  </CardTitle>
                   <CardDescription className="text-white/60 mt-2">
                     {project.tech}
                   </CardDescription>
@@ -68,19 +84,12 @@ const ProjectsSection = () => {
                   <p className="text-white/80">{project.description}</p>
                 </CardContent>
                 <CardFooter className="p-6 pt-0 flex justify-between gap-4">
-                  <Button 
-                    variant="default" 
+                  <Button
+                    variant="default"
                     className="bg-portfolio-green hover:bg-portfolio-green/90 flex-1"
-                    onClick={() => window.open(project.projectUrl, '_blank')}
+                    onClick={() => window.open(project.projectUrl, "_blank")}
                   >
-                    {t('projects.visit')}
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white/20 hover:bg-white/10 flex-1"
-                    onClick={() => window.open(project.githubUrl, '_blank')}
-                  >
-                    {t('projects.github')}
+                    {t("projects.visit")}
                   </Button>
                 </CardFooter>
               </Card>
@@ -89,13 +98,12 @@ const ProjectsSection = () => {
         </div>
 
         <ScrollReveal className="text-center mt-12 md:mt-16">
-          <Button 
-            variant="outline" 
-           
+          <Button
+            variant="outline"
             className="border-white/20 hover:bg-portfolio-green/90 hover:text-white text-black/85 px-8 py-3"
-            onClick={() => window.location.href = '#'}
+            onClick={() => navigate("/AllProjectsPage")} 
           >
-            {t('projects.viewAll')}
+            {t("projects.viewAll")}
           </Button>
         </ScrollReveal>
       </div>
