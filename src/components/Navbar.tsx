@@ -47,11 +47,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
           <a href="#" className="text-xl font-bold text-white">
-            Eslam<span className="text-portfolio-green">.dev</span>
+            Eslam<span className="text-portfolio-green"> Emam</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center gap-7">
             {navItems.map((item) => (
               <a
                 key={item.key}
@@ -64,7 +64,7 @@ const Navbar = () => {
           </nav>
 
           {/* Action buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center gap-4">
             <Button
               variant="ghost"
               size="icon"

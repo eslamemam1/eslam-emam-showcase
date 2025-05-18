@@ -5,7 +5,7 @@ import ScrollReveal from './ScrollReveal';
 import { Image } from 'lucide-react';
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { t ,language } = useLanguage();
 
   return (
     <section
@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="section-inner px-4 sm:px-6 md:px-8 lg:px-12 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
           {/* Text Content */}
-          <div className="text-left order-2 md:order-1 space-y-6 md:space-y-8">
+          <div className={ language === "en" ? "text-left order-2 md:order-1 space-y-6 md:space-y-8" : "text-right order-2 md:order-1 space-y-6 md:space-y-8" }>
             <ScrollReveal>
               <p className="text-portfolio-green text-lg md:text-xl mb-2 md:mb-3">
                 {t('hero.greeting')}
@@ -47,7 +47,7 @@ const HeroSection = () => {
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="border-white/20 hover:bg-white/10 text-white px-8 py-6 text-lg"
+                  className="border-white/20 hover:bg-portfolio-green hover:text-white text-black px-8 py-6 text-lg"
                   onClick={() => window.location.href = '#contact'}
                 >
                   {t('hero.contact')}
@@ -61,7 +61,7 @@ const HeroSection = () => {
             <ScrollReveal>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-green shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                  src="imges/me.jpg" 
                   alt="Eslam Emam" 
                   className="w-full h-full object-cover"
                 />

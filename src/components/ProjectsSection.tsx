@@ -91,7 +91,8 @@ const ProjectsSection = () => {
         <ScrollReveal className="text-center mt-12 md:mt-16">
           <Button 
             variant="outline" 
-            className="border-white/20 hover:bg-white/10 text-white px-8 py-3"
+           
+            className="border-white/20 hover:bg-portfolio-green/90 hover:text-white text-black/85 px-8 py-3"
             onClick={() => window.location.href = '#'}
           >
             {t('projects.viewAll')}
