@@ -102,6 +102,11 @@ const translations = {
     // Footer
     "footer.rights": "All rights reserved",
     "footer.madeWith": "Made with ❤️",
+    "Eslam":"Eslam",
+    "Emam":"Emam",
+    "footer.des":"Full Stack Engineer specializing in building exceptional digital experiences that are fast, accessible, and responsive.",
+    "Quick Links":"Quick Links",
+    "Contact Info":"Contact Info",
   },
   ar: {
     // Navigation
@@ -191,6 +196,11 @@ const translations = {
     // Footer
     "footer.rights": "جميع الحقوق محفوظة",
     "footer.madeWith": "صنع بكل ❤️",
+    "Eslam":"إسلام",
+    "Emam":"إمام",
+    "footer.des":"مهندس برمجيات متكامل متخصص في بناء تجارب رقمية استثنائية سريعة وسهلة الوصول ومتجاوبة.",
+    "Quick Links":"روابط سريعة",
+    "Contact Info":"معلومات الاتصال",
   },
 };
 
