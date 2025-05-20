@@ -25,7 +25,7 @@ const translations = {
     "hero.greeting": "Hello, I'm",
     "hero.name": "Eslam Emam",
     "hero.title": "Full Stack Engineer",
-    "hero.description": "I build exceptional and accessible digital experiences for the web.",
+    "hero.description": "a passionate Full Stack Developer crafting modern, responsive, and high-performance web applications.",
     "hero.cta": "View My Work",
     "hero.contact": "Contact Me",
     
@@ -107,7 +107,7 @@ const translations = {
     "hero.greeting": "مرحباً، أنا",
     "hero.name": "إسلام إمام",
     "hero.title": "مهندس الويب المتكامل",
-    "hero.description": "أقوم ببناء تجارب رقمية استثنائية وسهلة الوصول للويب.",
+    "hero.description": "مرحبًا، أنا إسلام إمام — مطور ويب متكامل شغوف، أصمم تطبيقات ويب حديثة ومتجاوبة وعالية الأداء.",
     "hero.cta": "تصفح أعمالي",
     "hero.contact": "اتصل بي",
     
