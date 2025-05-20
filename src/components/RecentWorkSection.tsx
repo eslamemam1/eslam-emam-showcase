@@ -40,14 +40,19 @@ const RecentWorkSection = () => {
   return (
     <section className="section section-dark">
       <div className="section-inner">
-        <ScrollReveal>
+      <h2 className="section-title text-center">
+            Eslam<span className="text-portfolio-green"> Emam</span>
+          </h2>
+        {/** 
+         * <ScrollReveal>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="section-title">{t('recentWork.title')}</h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">{t('recentWork.subtitle')}</p>
           </div>
-        </ScrollReveal>
+        </ScrollReveal>*/}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {/** this section is hiden  i remve this 'grid' */}
+        <div className="grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 hidden">
           {workItems.map((item, index) => (
             <ScrollReveal key={item.id} className={`delay-${index * 100}`}>
               <div className="group relative overflow-hidden rounded-lg cursor-pointer h-64 md:h-72">
