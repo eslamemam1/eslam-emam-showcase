@@ -1,12 +1,21 @@
-
-import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import ScrollReveal from './ScrollReveal';
+import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Mail,
+  Phone,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Facebook,
+  Youtube,
+} from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import ScrollReveal from "./ScrollReveal";
 
 interface FormData {
   name: string;
@@ -19,43 +28,45 @@ const ContactSection = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: t('contact.success'),
+        title: t("contact.success"),
         description: `Thank you ${formData.name}, I'll get back to you soon!`,
       });
       setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
       setLoading(false);
     }, 1500);
   };
 
   const socialLinks = [
-    { icon: Github, url: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, url: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, url: "https://twitter.com", label: "Twitter" },
-    { icon: Instagram, url: "https://instagram.com", label: "Instagram" },
+    { icon: Github, url: "https://github.com/eslamemam1", label: "GitHub" },
+    { icon: Linkedin, url: "www.linkedin.com/in/eslam-emam-12695815b", label: "LinkedIn" },
+    { icon: Facebook, url: "https://www.facebook.com/profile.php?id=61571808045016", label: "Facebook" },
+    { icon: Youtube, url: "https://www.youtube.com/@eslamemam5214", label: "Youtube" },
   ];
 
   return (
@@ -63,16 +74,18 @@ const ContactSection = () => {
       <div className="section-inner">
         <ScrollReveal>
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="section-title">{t('contact.title')}</h2>
-            <p className="text-lg text-portfolio-gray max-w-2xl mx-auto">{t('contact.subtitle')}</p>
+            <h2 className="section-title">{t("contact.title")}</h2>
+            <p className="text-lg text-portfolio-gray max-w-2xl mx-auto">
+              {t("contact.subtitle")}
+            </p>
           </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <ScrollReveal className="delay-100">
             <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
-              
+              <h3 className="text-2xl font-bold mb-8">{t("Get in Touch")}</h3>
+
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="bg-portfolio-green/10 p-3 rounded-full">
@@ -80,25 +93,31 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium">Email</h4>
-                    <p className="text-portfolio-gray">eslam.emam@example.com</p>
+                    <p className="text-portfolio-gray">
+                      <a href="mailto:eslamemam65@gmail.com">
+                        eslamemam65@gmail.com
+                      </a>
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="bg-portfolio-green/10 p-3 rounded-full">
                     <Phone className="w-6 h-6 text-portfolio-green" />
                   </div>
                   <div>
                     <h4 className="font-medium">Phone</h4>
-                    <p className="text-portfolio-gray">+1 (555) 123-4567</p>
+                    <p className="text-portfolio-gray">
+                      <a href="tel:+201090145286">+20 1090145286</a>
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="pt-6 border-t mt-4">
                   <h4 className="font-medium mb-4">Follow Me</h4>
                   <div className="flex gap-4">
                     {socialLinks.map((social, index) => (
-                      <a 
+                      <a
                         key={index}
                         href={social.url}
                         target="_blank"
@@ -114,14 +133,14 @@ const ContactSection = () => {
               </div>
             </div>
           </ScrollReveal>
-
-          <ScrollReveal className="delay-200">
+                {/** this section is hiddin */}
+          <ScrollReveal className="delay-200 hidden">
             <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold mb-6">Send A Message</h3>
+              <h3 className="text-2xl font-bold mb-6">{t("Send A Message")}</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="form-group">
                   <label htmlFor="name" className="block mb-2 font-medium">
-                    {t('contact.nameLabel')}
+                    {t("contact.nameLabel")}
                   </label>
                   <Input
                     id="name"
@@ -132,10 +151,10 @@ const ContactSection = () => {
                     className="w-full"
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="email" className="block mb-2 font-medium">
-                    {t('contact.emailLabel')}
+                    {t("contact.emailLabel")}
                   </label>
                   <Input
                     id="email"
@@ -147,10 +166,10 @@ const ContactSection = () => {
                     className="w-full"
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="subject" className="block mb-2 font-medium">
-                    {t('contact.subjectLabel')}
+                    {t("contact.subjectLabel")}
                   </label>
                   <Input
                     id="subject"
@@ -161,10 +180,10 @@ const ContactSection = () => {
                     className="w-full"
                   />
                 </div>
-                
+
                 <div className="form-group mb-8">
                   <label htmlFor="message" className="block mb-2 font-medium">
-                    {t('contact.messageLabel')}
+                    {t("contact.messageLabel")}
                   </label>
                   <Textarea
                     id="message"
@@ -175,23 +194,39 @@ const ContactSection = () => {
                     className="w-full min-h-[120px]"
                   />
                 </div>
-                
-                <Button 
+
+                <Button
                   type="submit"
                   className="w-full bg-portfolio-green hover:bg-portfolio-green/90 text-white py-3"
                   disabled={loading}
                 >
                   {loading ? (
                     <span className="flex items-center justify-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      <svg
+                        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
                       </svg>
                       Processing...
                     </span>
                   ) : (
                     <span className="flex items-center justify-center">
-                      {t('contact.submit')} <Send className="ml-2 w-4 h-4" />
+                      {t("contact.submit")} <Send className="ml-2 w-4 h-4" />
                     </span>
                   )}
                 </Button>

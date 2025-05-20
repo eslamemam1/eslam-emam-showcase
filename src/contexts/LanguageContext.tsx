@@ -98,6 +98,8 @@ const translations = {
     "contact.submit": "Send Message",
     "contact.success": "Your message has been sent successfully!",
     "contact.error": "There was an error sending your message. Please try again.",
+    "Send A Message":"Send A Message",
+    "Get in Touch":"Get in Touch",
     
     // Footer
     "footer.rights": "All rights reserved",
@@ -192,6 +194,8 @@ const translations = {
     "contact.submit": "إرسال الرسالة",
     "contact.success": "تم إرسال رسالتك بنجاح!",
     "contact.error": "حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.",
+    "Send A Message":"إرسال رسالة",
+    "Get in Touch":"تواصل معنا",
     
     // Footer
     "footer.rights": "جميع الحقوق محفوظة",
