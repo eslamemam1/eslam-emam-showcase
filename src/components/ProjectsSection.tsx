@@ -31,8 +31,8 @@ const ProjectsSection = () => {
       description: t("project2.description"),
       tech: t("project2.tech"),
       imageUrl:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
-      projectUrl: "#",
+        "imges/3lamko.png",
+      projectUrl: "https://3lamko-bus.com/",
       githubUrl: "#",
     },
     {
@@ -41,8 +41,8 @@ const ProjectsSection = () => {
       description: t("project3.description"),
       tech: t("project3.tech"),
       imageUrl:
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3",
-      projectUrl: "#",
+        "imges/holyQoran.png",
+      projectUrl: "https://eslamemam1.github.io/The-Holy-Quran-/",
       githubUrl: "#",
     },
   ];
@@ -96,8 +96,8 @@ const ProjectsSection = () => {
             </ScrollReveal>
           ))}
         </div>
-
-        <ScrollReveal className="text-center mt-12 md:mt-16">
+          {/** this is hiddin projects.viewAll */}
+        <ScrollReveal className="text-center mt-12 md:mt-16 hidden">
           <Button
             variant="outline"
             className="border-white/20 hover:bg-portfolio-green/90 hover:text-white text-black/85 px-8 py-3"

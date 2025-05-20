@@ -55,14 +55,14 @@ const translations = {
     "project1.tech": "React, Tailwind Css",
     
     // Project 2
-    "project2.title": "Social Media Dashboard",
-    "project2.description": "A comprehensive dashboard for managing social media accounts, analytics, and content scheduling.",
-    "project2.tech": "Vue.js, Firebase, Express, Chart.js",
+    "project2.title": "3lamko Bus",
+    "project2.description": "A travel agency specializing in transportation from Cairo to Sharm El Sheikh or any other destination using microbuses and limousines.",
+    "project2.tech": "React.js, TypeScript, Supabase",
     
     // Project 3
-    "project3.title": "Real Estate Application",
-    "project3.description": "A property listing platform with advanced search, user favorites, and interactive maps.",
-    "project3.tech": "React Native, GraphQL, PostgreSQL, AWS",
+    "project3.title": "The Holy Quran",
+    "project3.description": "The Holy Quran — A responsive React app offering Quran text, translations, and audio recitations for easy reading and listening on any device.",
+    "project3.tech": "React,Tailwind Css",
     
     // Testimonials Section
     "testimonials.title": "Testimonials",
@@ -144,14 +144,14 @@ const translations = {
     "project1.tech": "React,Tailwind Css",
     
     // Project 2
-    "project2.title": "لوحة تحكم وسائل التواصل الاجتماعي",
-    "project2.description": "لوحة تحكم شاملة لإدارة حسابات التواصل الاجتماعي، التحليلات، وجدولة المحتوى.",
-    "project2.tech": "Vue.js، Firebase، Express، Chart.js",
+    "project2.title": "عالمكو باص",
+    "project2.description": "وكالة سياحة متخصصة في النقل من القاهرة إلى شرم الشيخ أو أي وجهة أخرى باستخدام الميكروباصات والليموزين.",
+    "project2.tech": "React.js, TypeScript, Supabase",
     
     // Project 3
-    "project3.title": "تطبيق العقارات",
-    "project3.description": "منصة قوائم العقارات مع بحث متقدم، مفضلات المستخدم، وخرائط تفاعلية.",
-    "project3.tech": "React Native، GraphQL، PostgreSQL، AWS",
+    "project3.title": "القرآن الكريم",
+    "project3.description": "القرآن الكريم - تطبيق React متجاوب يقدم نصوص القرآن الكريم وترجماته وتلاوات صوتية للقراءة والاستماع بسهولة على أي جهاز.",
+    "project3.tech": "React,Tailwind Css",
     
     // Testimonials Section
     "testimonials.title": "الشهادات",
