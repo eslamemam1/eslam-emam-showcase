@@ -7,12 +7,16 @@ const AboutSection = () => {
   
   // Skills data
   const skills = [
-    { name: 'React', level: 90 },
-    { name: 'Node.js', level: 85 },
+    { name: 'HTML', level: 90 },
+    { name: 'CSS', level: 90 },
+    { name: 'JavaScript', level: 85 },
+    { name: 'React.js', level: 80 },
+    { name: 'Tailwind CSS', level: 90 },
     { name: 'TypeScript', level: 80 },
-    { name: 'MongoDB', level: 75 },
-    { name: 'AWS', level: 70 },
-    { name: 'Docker', level: 65 },
+    { name: 'supabase & firebase', level: 85 },
+    { name: 'Node.js', level: 65 },
+    { name: 'Express.js', level: 55 },
+    { name: 'Version Control (Git & GitHub)', level: 55 },
   ];
 
   return (
@@ -20,8 +24,8 @@ const AboutSection = () => {
       <div className="section-inner">
         <ScrollReveal>
           <h2 className="section-title text-center">
-            <span className="text-portfolio-dark">About</span>
-            <span className="text-portfolio-green"> Me</span>
+            <span className="text-portfolio-dark">{t("About")}</span>
+            <span className="text-portfolio-green">{t(" Me")}</span>
           </h2>
         </ScrollReveal>
 
@@ -30,20 +34,15 @@ const AboutSection = () => {
           <div className="space-y-6 md:space-y-8">
             <ScrollReveal direction="right" delay={200}>
               <h3 className="text-2xl font-bold mb-6 text-portfolio-dark">
-                Full Stack Engineer with a passion for creating impactful applications
+              {t("decritiopn.exp.title")}
               </h3>
               
               <p className="text-portfolio-gray mb-6">
-                With over 5 years of experience in web development, I specialize in building
-                scalable and performant applications using modern technologies. My goal is to
-                create software that not only meets technical requirements but also delivers
-                an exceptional user experience.
+                {t("description.exp")}
               </p>
               
               <p className="text-portfolio-gray mb-8">
-                I'm proficient in front-end frameworks like React and Vue.js, as well as
-                back-end technologies like Node.js and Python. I have experience with database
-                systems including MongoDB, PostgreSQL, and Firebase.
+              {t("decritiopn.tec")}
               </p>
               
               <div className="flex flex-wrap gap-4 mt-8">
@@ -51,14 +50,14 @@ const AboutSection = () => {
                   href="#projects" 
                   className="bg-portfolio-green hover:bg-portfolio-green/90 text-white px-6 py-3 rounded-md transition-colors"
                 >
-                  View My Work
+                  {t("View My Work")}
                 </a>
                 <a 
-                  href="/resume.pdf" 
+                  href="public/files/my-resume-final.pdf" 
                   target="_blank" 
                   className="border border-portfolio-gray/30 hover:bg-portfolio-gray/10 text-portfolio-gray px-6 py-3 rounded-md transition-colors"
                 >
-                  Download Resume
+                  {t("Download Resume")}
                 </a>
               </div>
             </ScrollReveal>
@@ -68,7 +67,7 @@ const AboutSection = () => {
           <div className="mt-8 md:mt-0">
             <ScrollReveal direction="left" delay={400}>
               <h3 className="text-2xl font-bold mb-8 text-portfolio-dark">
-                My Skills
+                {t("My Skills")}
               </h3>
               
               <div className="space-y-6">
