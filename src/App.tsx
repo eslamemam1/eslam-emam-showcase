@@ -7,7 +7,6 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AllProjectsPage from "./components/AllProjectsPage"
 import { LanguageProvider } from './contexts/LanguageContext';
-import ResumePage from "./pages/ResumePage";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +20,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/AllProjectsPage" element={<AllProjectsPage />} />
-          <Route path="/ResumePage" element={<ResumePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

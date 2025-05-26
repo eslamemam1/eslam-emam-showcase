@@ -48,10 +48,9 @@ const AboutSection = () => {
                   {t("View My Work")}
                 </a>
                 <a
-                  href="/ResumePage"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-portfolio-gray/30 hover:bg-portfolio-gray/10 text-portfolio-gray px-6 py-3 rounded-md transition-colors"
+                  href="/files/my-resume-final.pdf"
+                  download
+                  className="bg-portfolio-green text-white px-6 py-3 rounded-md hover:bg-portfolio-green/90 transition"
                 >
                   {t("Download Resume")}
                 </a>
