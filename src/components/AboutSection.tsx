@@ -1,22 +1,22 @@
-
-import { useLanguage } from '../contexts/LanguageContext';
-import ScrollReveal from './ScrollReveal';
+import { useLanguage } from "../contexts/LanguageContext";
+import ScrollReveal from "./ScrollReveal";
+import ResumePage from "@/pages/ResumePage";
 
 const AboutSection = () => {
   const { t } = useLanguage();
-  
+
   // Skills data
   const skills = [
-    { name: 'HTML', level: 90 },
-    { name: 'CSS', level: 90 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'React.js', level: 80 },
-    { name: 'Tailwind CSS', level: 90 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'supabase & firebase', level: 85 },
-    { name: 'Node.js', level: 65 },
-    { name: 'Express.js', level: 55 },
-    { name: 'Version Control (Git & GitHub)', level: 55 },
+    { name: "HTML", level: 90 },
+    { name: "CSS", level: 90 },
+    { name: "JavaScript", level: 85 },
+    { name: "React.js", level: 80 },
+    { name: "Tailwind CSS", level: 90 },
+    { name: "TypeScript", level: 80 },
+    { name: "supabase & firebase", level: 85 },
+    { name: "Node.js", level: 65 },
+    { name: "Express.js", level: 55 },
+    { name: "Version Control (Git & GitHub)", level: 55 },
   ];
 
   return (
@@ -34,27 +34,23 @@ const AboutSection = () => {
           <div className="space-y-6 md:space-y-8">
             <ScrollReveal direction="right" delay={200}>
               <h3 className="text-2xl font-bold mb-6 text-portfolio-dark">
-              {t("decritiopn.exp.title")}
+                {t("decritiopn.exp.title")}
               </h3>
-              
-              <p className="text-portfolio-gray mb-6">
-                {t("description.exp")}
-              </p>
-              
-              <p className="text-portfolio-gray mb-8">
-              {t("decritiopn.tec")}
-              </p>
-              
+
+              <p className="text-portfolio-gray mb-6">{t("description.exp")}</p>
+
+              <p className="text-portfolio-gray mb-8">{t("decritiopn.tec")}</p>
+
               <div className="flex flex-wrap gap-4 mt-8">
-                <a 
-                  href="#projects" 
+                <a
+                  href="#projects"
                   className="bg-portfolio-green hover:bg-portfolio-green/90 text-white px-6 py-3 rounded-md transition-colors"
                 >
                   {t("View My Work")}
                 </a>
-                <a 
-                  href="files/my-resume-final.pdf" 
-                  target="_blank" 
+                <a
+                  href="/ResumePage"
+                  target="_blank"
                   className="border border-portfolio-gray/30 hover:bg-portfolio-gray/10 text-portfolio-gray px-6 py-3 rounded-md transition-colors"
                 >
                   {t("Download Resume")}
@@ -62,24 +58,28 @@ const AboutSection = () => {
               </div>
             </ScrollReveal>
           </div>
-          
+
           {/* Skills */}
           <div className="mt-8 md:mt-0">
             <ScrollReveal direction="left" delay={400}>
               <h3 className="text-2xl font-bold mb-8 text-portfolio-dark">
                 {t("My Skills")}
               </h3>
-              
+
               <div className="space-y-6">
                 {skills.map((skill, index) => (
                   <div key={index}>
                     <div className="flex justify-between mb-2">
-                      <span className="font-medium text-portfolio-dark">{skill.name}</span>
-                      <span className="text-portfolio-green">{skill.level}%</span>
+                      <span className="font-medium text-portfolio-dark">
+                        {skill.name}
+                      </span>
+                      <span className="text-portfolio-green">
+                        {skill.level}%
+                      </span>
                     </div>
                     <div className="w-full bg-portfolio-gray/20 rounded-full h-2.5">
-                      <div 
-                        className="bg-portfolio-green h-2.5 rounded-full" 
+                      <div
+                        className="bg-portfolio-green h-2.5 rounded-full"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
