@@ -1,6 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
-import ResumePage from "@/pages/ResumePage";
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -51,6 +50,7 @@ const AboutSection = () => {
                 <a
                   href="/ResumePage"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-portfolio-gray/30 hover:bg-portfolio-gray/10 text-portfolio-gray px-6 py-3 rounded-md transition-colors"
                 >
                   {t("Download Resume")}
