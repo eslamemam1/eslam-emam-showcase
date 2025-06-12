@@ -20,8 +20,7 @@ const ProjectsSection = () => {
       title: t("project1.title"),
       description: t("project1.description"),
       tech: t("project1.tech"),
-      imageUrl:
-        "/imges/caf.png",
+      imageUrl: "/imges/caf.png",
       projectUrl: "https://caf-sports.com/",
       githubUrl: "#",
     },
@@ -30,8 +29,7 @@ const ProjectsSection = () => {
       title: t("project2.title"),
       description: t("project2.description"),
       tech: t("project2.tech"),
-      imageUrl:
-        "imges/3lamko.png",
+      imageUrl: "imges/3lamko.png",
       projectUrl: "https://3lamko-bus.com/",
       githubUrl: "#",
     },
@@ -40,10 +38,18 @@ const ProjectsSection = () => {
       title: t("project3.title"),
       description: t("project3.description"),
       tech: t("project3.tech"),
-      imageUrl:
-        "imges/holyQoran.png",
+      imageUrl: "imges/holyQoran.png",
       projectUrl: "https://eslamemam1.github.io/The-Holy-Quran-/",
       githubUrl: "#",
+    },
+    {
+      id: 4,
+      title: t("project4.title"),
+      description: t("project4.description"),
+      tech: t("project4.tech"),
+      imageUrl: "imges/CRUD-API.png",
+      projectUrl: "https://crud-angular-app.netlify.app/",
+      githubUrl: "https://github.com/eslamemam1/angular-crud-fake-api",
     },
   ];
 
@@ -96,12 +102,12 @@ const ProjectsSection = () => {
             </ScrollReveal>
           ))}
         </div>
-          {/** this is hiddin projects.viewAll */}
+        {/** this is hiddin projects.viewAll */}
         <ScrollReveal className="text-center mt-12 md:mt-16 hidden">
           <Button
             variant="outline"
             className="border-white/20 hover:bg-portfolio-green/90 hover:text-white text-black/85 px-8 py-3"
-            onClick={() => navigate("/AllProjectsPage")} 
+            onClick={() => navigate("/AllProjectsPage")}
           >
             {t("projects.viewAll")}
           </Button>

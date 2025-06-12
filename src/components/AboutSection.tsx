@@ -10,6 +10,7 @@ const AboutSection = () => {
     { name: "CSS", level: 90 },
     { name: "JavaScript", level: 85 },
     { name: "React.js", level: 80 },
+    { name: "Angular.js", level: 85 },
     { name: "Tailwind CSS", level: 90 },
     { name: "TypeScript", level: 80 },
     { name: "supabase & firebase", level: 85 },
