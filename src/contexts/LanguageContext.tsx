@@ -25,9 +25,9 @@ const translations = {
     // Hero Section
     "hero.greeting": "Hello, I'm",
     "hero.name": "Eslam Emam",
-    "hero.title": "Full Stack Engineer",
+    "hero.title": "Software Engineer",
     "hero.description":
-      "a passionate Full Stack Developer crafting modern, responsive, and high-performance web applications.",
+      "a passionate Software Engineer crafting modern, responsive, and high-performance web applications.",
     "hero.cta": "View My Work",
     "hero.contact": "Contact Me",
 
@@ -39,14 +39,14 @@ const translations = {
     "View My Work": "View My Work",
     "Download Resume": "Download Resume",
     "about.description":
-      "I'm a full stack engineer with a passion for creating beautiful, functional, and user-centered digital experiences. With a background in both front-end and back-end development, I bring a holistic approach to building web applications.",
+      "I'm a Software Engineer  with a passion for creating beautiful, functional, and user-centered digital experiences. With a background in both front-end and back-end development, I bring a holistic approach to building web applications.",
     "about.skills": "Technologies I work with:",
     "description.exp":
       "With over 3 years of experience in web development, I specialize in building scalable and performant applications using modern technologies. My goal is to create software that not only meets technical requirements but also delivers an exceptional user experience.",
     "decritiopn.tec":
       " I'm proficient in front-end frameworks like React and Angular, as well as back-end technologies like Node.js and Express.js. I have experience with databasesystems including MongoDB, Supabase, and Firebase.",
     "decritiopn.exp.title":
-      "Full Stack Engineer with a passion for creating impactful applications",
+      "Software Engineer with a passion for creating impactful applications",
     // Projects Section
     "projects.title": "Case Studies",
     "projects.subtitle": "Some of my recent projects",
@@ -125,7 +125,7 @@ const translations = {
     Eslam: "Eslam",
     Emam: "Emam",
     "footer.des":
-      "Full Stack Engineer specializing in building exceptional digital experiences that are fast, accessible, and responsive.",
+      "Software Engineer specializing in building exceptional digital experiences that are fast, accessible, and responsive.",
     "Quick Links": "Quick Links",
     "Contact Info": "Contact Info",
   },
@@ -140,9 +140,9 @@ const translations = {
     // Hero Section
     "hero.greeting": "مرحباً، أنا",
     "hero.name": "إسلام إمام",
-    "hero.title": "مهندس الويب المتكامل",
+    "hero.title": "مهندس برمجيات",
     "hero.description":
-      "مرحبًا، أنا إسلام إمام — مطور ويب متكامل شغوف، أصمم تطبيقات ويب حديثة ومتجاوبة وعالية الأداء.",
+      "مرحبًا، أنا إسلام إمام — مهندس برمجيات شغوف، أصمم تطبيقات ويب حديثة ومتجاوبة وعالية الأداء.",
     "hero.cta": "تصفح أعمالي",
     "hero.contact": "اتصل بي",
 
@@ -154,14 +154,13 @@ const translations = {
     "Download Resume": "تنزيل السيرة الذاتية",
     "View My Work": "عرض أعمالي",
     "about.description":
-      "أنا مهندس متكامل متخصص في تطوير الويب بشغف لإنشاء تجارب رقمية جميلة وعملية تركز على المستخدم. مع خلفية في تطوير الواجهة الأمامية والخلفية، أقدم نهجًا شاملاً لبناء تطبيقات الويب.",
+      "أنا مهندس برمجيات متخصص في تطوير الويب بشغف لإنشاء تجارب رقمية جميلة وعملية تركز على المستخدم. مع خلفية في تطوير الواجهة الأمامية والخلفية، أقدم نهجًا شاملاً لبناء تطبيقات الويب.",
     "about.skills": "التقنيات التي أعمل بها:",
     "description.exp":
       "بخبرة تزيد عن ثلاث سنوات في تطوير الويب، أتخصص في بناء تطبيقات قابلة للتطوير وعالية الأداء باستخدام التقنيات الحديثة. هدفي هو إنشاء برامج لا تلبي المتطلبات التقنية فحسب، بل توفر أيضًا تجربة مستخدم استثنائية.",
     "decritiopn.tec":
       "أتقن أطر عمل الواجهة الأمامية مثل React وAngular، بالإضافة إلى تقنيات الواجهة الخلفية مثل Node.js وExpress.js. لديّ خبرة في أنظمة قواعد البيانات، بما في ذلك MongoDB وSupabase وFirebase.",
-    "decritiopn.exp.title":
-      "مهندس برمجيات متكامل لديه شغف بإنشاء تطبيقات مؤثرة",
+    "decritiopn.exp.title": "مهندس برمجيات لديه شغف بإنشاء تطبيقات مؤثرة",
     // Projects Section
     "projects.title": "دراسات الحالة",
     "projects.subtitle": "بعض مشاريعي الحديثة",
@@ -239,7 +238,7 @@ const translations = {
     Eslam: "إسلام",
     Emam: "إمام",
     "footer.des":
-      "مهندس برمجيات متكامل متخصص في بناء تجارب رقمية استثنائية سريعة وسهلة الوصول ومتجاوبة.",
+      "مهندس برمجيات متخصص في بناء تجارب رقمية استثنائية سريعة وسهلة الوصول ومتجاوبة.",
     "Quick Links": "روابط سريعة",
     "Contact Info": "معلومات الاتصال",
   },
