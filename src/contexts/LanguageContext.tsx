@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 
 type Language = "en" | "ar";
 
@@ -77,6 +83,12 @@ const translations = {
     "project4.description":
       "I developed a CRUD application using Angular that allows users to Create, Read, Update, and Delete facial data using a JSON-based Face API.",
     "project4.tech": "Angular,Tailwind Css,Fake Api",
+
+    // Project 5
+    "project5.title": "Hurghada Vibes Tours",
+    "project5.description":
+      "Hurghada Vibes Tours is a tour company that offers tours to the Hurghada area.",
+    "project5.tech": "Angular.js, Tailwind Css",
 
     // Testimonials Section
     "testimonials.title": "Testimonials",
@@ -192,6 +204,12 @@ const translations = {
       "لقد قمت بتطوير تطبيق CRUD باستخدام Angular الذي يسمح للمستخدمين بإنشاء بيانات الوجه وقراءتها وتحديثها وحذفها باستخدام واجهة برمجة تطبيقات الوجه المستندة إلى JSON.",
     "project4.tech": "Angular,Tailwind Css,Fake Api",
 
+    // Project 5
+    "project5.title": "جولات فيبز الغردقة",
+    "project5.description":
+      "جولات فيبز الغردقة شركة سياحة تقدّم جولات وبرامج في منطقة الغردقة.",
+    "project5.tech": "Angular.js, Tailwind Css",
+
     // Testimonials Section
     "testimonials.title": "الشهادات",
     "testimonials.subtitle": "ماذا يقول عملائي",
@@ -247,7 +265,12 @@ const translations = {
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>("ar");
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+  }, [language]);
 
   const t = (key: string): string => {
     return (
