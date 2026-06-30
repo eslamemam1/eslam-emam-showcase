@@ -20,7 +20,7 @@ const ProjectsSection = () => {
       title: t("project1.title"),
       description: t("project1.description"),
       tech: t("project1.tech"),
-      imageUrl: "/imges/caf.png",
+      imageUrl: "/imges/caf.jpg",
       projectUrl: "https://caf-sports.com/",
       githubUrl: "#",
     },
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       title: t("project2.title"),
       description: t("project2.description"),
       tech: t("project2.tech"),
-      imageUrl: "imges/3lamko.png",
+      imageUrl: "/imges/3lamko.jpg",
       projectUrl: "https://3lamko-bus.com/",
       githubUrl: "#",
     },
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       title: t("project5.title"),
       description: t("project5.description"),
       tech: t("project5.tech"),
-      imageUrl: "imges/hurghada-vibes.png",
+      imageUrl: "/imges/hurghada-vibes.jpg",
       projectUrl: "https://www.hurghada-vibes-tours.com/",
       githubUrl: "https://www.hurghada-vibes-tours.com/",
     },
@@ -47,7 +47,7 @@ const ProjectsSection = () => {
       title: t("project3.title"),
       description: t("project3.description"),
       tech: t("project3.tech"),
-      imageUrl: "imges/holyQoran.png",
+      imageUrl: "/imges/holyQoran.jpg",
       projectUrl: "https://eslamemam1.github.io/The-Holy-Quran-/",
       githubUrl: "#",
     },
@@ -75,6 +75,8 @@ const ProjectsSection = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
                   />
                 </div>

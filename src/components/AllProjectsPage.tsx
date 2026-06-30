@@ -50,6 +50,8 @@ const AllProjectsPage = () => {
                     <img
                       src={project.imageUrl}
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
                     />
                   </div>

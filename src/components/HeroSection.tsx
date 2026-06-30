@@ -61,9 +61,13 @@ const HeroSection = () => {
             <ScrollReveal>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-green shadow-xl">
                 <img 
-                  src="imges/me.jpg" 
+                  src="/imges/me.jpg" 
                   alt="Eslam Emam" 
                   className="w-full h-full object-cover"
+                  width={320}
+                  height={320}
+                  fetchPriority="high"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/70 to-transparent"></div>
               </div>
