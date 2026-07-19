@@ -1,5 +1,6 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
+import { asset } from "@/lib/assets";
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -50,7 +51,7 @@ const AboutSection = () => {
                   {t("View My Work")}
                 </a>
                 <a
-                  href="/files/Eslam-Emam-Resume.pdf"
+                  href={asset("files/Eslam-Emam-Resume.pdf")}
                   download
                   className="bg-portfolio-green text-white px-6 py-3 rounded-md hover:bg-portfolio-green/90 transition"
                 >

@@ -2,7 +2,7 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
-import { Image } from 'lucide-react';
+import { asset } from '@/lib/assets';
 
 const HeroSection = () => {
   const { t ,language } = useLanguage();
@@ -61,7 +61,7 @@ const HeroSection = () => {
             <ScrollReveal>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-green shadow-xl">
                 <img 
-                  src="/imges/me.jpg" 
+                  src={asset("imges/me.jpg")} 
                   alt="Eslam Emam" 
                   className="w-full h-full object-cover"
                   width={320}
