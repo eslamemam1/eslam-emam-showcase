@@ -41,12 +41,17 @@ const translations = {
     "about.title": "About Me",
     About: "About",
     " Me": " Me",
-    "My Skills": "My Skills",
+    "My Skills": "Technical Skills",
     "View My Work": "View My Work",
     "Download Resume": "Download Resume",
     "about.description":
       "I'm a Software Engineer  with a passion for creating beautiful, functional, and user-centered digital experiences. With a background in both front-end and back-end development, I bring a holistic approach to building web applications.",
     "about.skills": "Technologies I work with:",
+    "skills.frontend": "Frontend",
+    "skills.angular": "Angular",
+    "skills.cms": "CMS & Headless",
+    "skills.backend": "Backend (Basic Knowledge)",
+    "skills.tools": "Tools & Platforms",
     "description.exp":
       "With over 3 years of experience in web development, I specialize in building scalable and performant applications using modern technologies. My goal is to create software that not only meets technical requirements but also delivers an exceptional user experience.",
     "decritiopn.tec":
@@ -95,22 +100,22 @@ const translations = {
     "testimonials.subtitle": "What my clients say",
 
     // Testimonial 1
-    "testimonial1.name": "Sarah Johnson",
-    "testimonial1.company": "TechStart Inc.",
+    "testimonial1.name": "Mohamed Slah",
+    "testimonial1.company": "Hurghada Vibes Tours",
     "testimonial1.text":
-      "Eslam is an exceptional developer who delivered our project on time and exceeded our expectations. His attention to detail and problem-solving skills are outstanding.",
+      "Eslam built our Hurghada Vibes Tours website with a clean design and smooth booking experience. He understood what we needed and delivered a site that represents our brand perfectly.",
 
     // Testimonial 2
-    "testimonial2.name": "Mohammed Al-Farsi",
-    "testimonial2.company": "Global Solutions Ltd.",
+    "testimonial2.name": "Mohamed Ibrahim",
+    "testimonial2.company": "CAF Sports",
     "testimonial2.text":
-      "Working with Eslam was a pleasure. He understood our business needs perfectly and translated them into an excellent web application. Highly recommended!",
+      "Working with Eslam on the CAF Sports website was a great experience. He turned our requirements into a professional, fast, and modern web presence for our sports construction business.",
 
     // Testimonial 3
-    "testimonial3.name": "Jennifer Lee",
-    "testimonial3.company": "Creative Digital Agency",
+    "testimonial3.name": "Alaa Ibrahim",
+    "testimonial3.company": "3lamko Bus",
     "testimonial3.text":
-      "Eslam's technical expertise and creativity helped us launch our platform successfully. He's responsive, professional, and delivers high-quality work.",
+      "Eslam developed the 3lamko Bus platform with care and attention to detail. He's responsive, professional, and delivered a high-quality web application for our travel agency.",
 
     // Recent Work Section
     "recentWork.title": "Recent Work",
@@ -162,12 +167,17 @@ const translations = {
     "about.title": "نبذة عني",
     About: "نبذة",
     " Me": " عني",
-    "My Skills": "مهاراتي",
+    "My Skills": "المهارات التقنية",
     "Download Resume": "تنزيل السيرة الذاتية",
     "View My Work": "عرض أعمالي",
     "about.description":
       "أنا مهندس برمجيات متخصص في تطوير الويب بشغف لإنشاء تجارب رقمية جميلة وعملية تركز على المستخدم. مع خلفية في تطوير الواجهة الأمامية والخلفية، أقدم نهجًا شاملاً لبناء تطبيقات الويب.",
     "about.skills": "التقنيات التي أعمل بها:",
+    "skills.frontend": "الواجهة الأمامية",
+    "skills.angular": "Angular",
+    "skills.cms": "أنظمة المحتوى والـ Headless",
+    "skills.backend": "الواجهة الخلفية (معرفة أساسية)",
+    "skills.tools": "الأدوات والمنصات",
     "description.exp":
       "بخبرة تزيد عن ثلاث سنوات في تطوير الويب، أتخصص في بناء تطبيقات قابلة للتطوير وعالية الأداء باستخدام التقنيات الحديثة. هدفي هو إنشاء برامج لا تلبي المتطلبات التقنية فحسب، بل توفر أيضًا تجربة مستخدم استثنائية.",
     "decritiopn.tec":
@@ -215,22 +225,22 @@ const translations = {
     "testimonials.subtitle": "ماذا يقول عملائي",
 
     // Testimonial 1
-    "testimonial1.name": "سارة جونسون",
-    "testimonial1.company": "تيك ستارت",
+    "testimonial1.name": "محمد صلاح",
+    "testimonial1.company": "جولات فيبز الغردقة",
     "testimonial1.text":
-      "إسلام مطور استثنائي قام بتسليم مشروعنا في الوقت المحدد وتجاوز توقعاتنا. اهتمامه بالتفاصيل ومهارات حل المشكلات رائعة.",
+      "إسلام بنى موقع جولات فيبز الغردقة بتصميم نظيف وتجربة حجز سلسة. فهم ما نحتاجه وقدّم موقعًا يعبّر عن علامتنا التجارية بشكل ممتاز.",
 
     // Testimonial 2
-    "testimonial2.name": "محمد الفارسي",
-    "testimonial2.company": "الحلول العالمية المحدودة",
+    "testimonial2.name": "محمد إبراهيم",
+    "testimonial2.company": "كاف سبورتس",
     "testimonial2.text":
-      "العمل مع إسلام كان ممتعًا. لقد فهم احتياجات أعمالنا بشكل مثالي وترجمها إلى تطبيق ويب ممتاز. أوصي به بشدة!",
+      "العمل مع إسلام على موقع كاف سبورتس كان تجربة رائعة. حوّل متطلباتنا إلى حضور ويب احترافي وسريع وحديث لأعمال البناء الرياضي لدينا.",
 
     // Testimonial 3
-    "testimonial3.name": "جينيفر لي",
-    "testimonial3.company": "وكالة الإبداع الرقمية",
+    "testimonial3.name": "علاء إبراهيم",
+    "testimonial3.company": "عالمكو باص",
     "testimonial3.text":
-      "ساعدتنا خبرة إسلام التقنية وإبداعه في إطلاق منصتنا بنجاح. إنه سريع الاستجابة ومحترف ويقدم عملًا عالي الجودة.",
+      "طوّر إسلام منصة عالمكو باص باهتمام ودقة عالية. إنه سريع الاستجابة ومحترف وقدّم تطبيق ويب عالي الجودة لوكالة السفر لدينا.",
 
     // Recent Work Section
     "recentWork.title": "أعمال حديثة",
