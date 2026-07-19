@@ -110,49 +110,66 @@ html {
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6;
   }
-  
-  .section-subtitle {
-    @apply text-lg md:text-xl max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16;
+
+  .section-eyebrow {
+    @apply mb-2 text-sm font-semibold uppercase tracking-widest text-portfolio-green;
   }
-  
-  /* Card components spacing */
-  .card-padding {
-    @apply p-4 sm:p-6 md:p-8;
+
+  .section-header {
+    @apply mx-auto mb-12 max-w-2xl text-center md:mb-16;
   }
-  
-  .card-spacing {
-    @apply space-y-4 sm:space-y-5;
+
+  .section-lead {
+    @apply mx-auto max-w-2xl text-lg text-portfolio-gray;
   }
-  
-  /* Grid and flex layouts */
-  .grid-gap {
-    @apply gap-4 sm:gap-6 md:gap-8 lg:gap-10;
+
+  .section-dark .section-lead {
+    @apply text-white/70;
   }
-  
-  .flex-gap {
-    @apply gap-3 sm:gap-4 md:gap-5 lg:gap-6;
+
+  .panel {
+    @apply rounded-2xl border border-black/5 bg-white transition-all duration-300;
   }
-  
-  /* Form element spacing */
-  .form-group {
-    @apply mb-4 sm:mb-6;
+
+  .panel-hover {
+    @apply hover:border-portfolio-green/40 hover:shadow-[0_12px_40px_-20px_rgba(16,185,129,0.4)];
   }
-  
+
+  .panel-dark {
+    @apply overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:border-portfolio-green/40 hover:bg-white/[0.05];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-portfolio-green px-6 py-3 text-white transition-colors hover:bg-portfolio-green/90;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center rounded-md border border-portfolio-dark/15 px-6 py-3 text-portfolio-dark transition-colors hover:border-portfolio-green hover:text-portfolio-green;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center rounded-md border border-white/20 px-6 py-3 text-white transition-colors hover:border-portfolio-green hover:bg-portfolio-green;
+  }
+
+  .skill-chip {
+    @apply inline-block rounded-md bg-black/[0.04] px-2.5 py-1 text-sm text-portfolio-dark/90 transition-colors hover:bg-portfolio-green/15;
+  }
+
   .section-dark {
     @apply bg-portfolio-dark text-portfolio-light;
   }
-  
+
   .section-light {
     @apply bg-portfolio-light text-portfolio-dark;
   }
-  
+
   .reveal {
-    @apply opacity-0;
+    opacity: 0;
   }
-  
+
   .reveal.active {
-    @apply animate-fade-in;
+    opacity: 1;
   }
 }

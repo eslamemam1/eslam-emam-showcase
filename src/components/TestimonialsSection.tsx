@@ -31,16 +31,14 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="section section-light">
       <div className="section-inner">
         <ScrollReveal>
-          <div className="mx-auto mb-12 max-w-2xl text-center md:mb-14">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-portfolio-green">
-              {t("testimonials.subtitle")}
-            </p>
+          <div className="section-header">
+            <p className="section-eyebrow">{t("testimonials.subtitle")}</p>
             <h2 className="section-title mb-0">{t("testimonials.title")}</h2>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal>
-          <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-black/5 bg-white">
+        <ScrollReveal delay={120}>
+          <div className="panel mx-auto max-w-5xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-3">
               {clients.map((client, index) => (
                 <a

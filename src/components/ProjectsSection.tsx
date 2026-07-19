@@ -1,14 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import ScrollReveal from "./ScrollReveal";
 import { asset } from "@/lib/assets";
 
@@ -23,7 +14,6 @@ const ProjectsSection = () => {
       tech: t("project1.tech"),
       imageUrl: asset("imges/caf.jpg"),
       projectUrl: "https://caf-sports.com/",
-      githubUrl: "#",
     },
     {
       id: 2,
@@ -32,7 +22,6 @@ const ProjectsSection = () => {
       tech: t("project2.tech"),
       imageUrl: asset("imges/3lamko.jpg"),
       projectUrl: "https://3lamko-bus.com/",
-      githubUrl: "#",
     },
     {
       id: 5,
@@ -41,7 +30,6 @@ const ProjectsSection = () => {
       tech: t("project5.tech"),
       imageUrl: asset("imges/hurghada-vibes.jpg"),
       projectUrl: "https://www.hurghada-vibes-tours.com/",
-      githubUrl: "https://www.hurghada-vibes-tours.com/",
     },
     {
       id: 3,
@@ -50,71 +38,53 @@ const ProjectsSection = () => {
       tech: t("project3.tech"),
       imageUrl: asset("imges/holyQoran.jpg"),
       projectUrl: "https://eslamemam1.github.io/The-Holy-Quran-/",
-      githubUrl: "#",
     },
   ];
-
-  const navigate = useNavigate();
 
   return (
     <section id="projects" className="section section-dark">
       <div className="section-inner">
         <ScrollReveal>
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="section-title">{t("projects.title")}</h2>
-            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
-              {t("projects.subtitle")}
-            </p>
+          <div className="section-header">
+            <p className="section-eyebrow">{t("projects.subtitle")}</p>
+            <h2 className="section-title mb-0 text-white">
+              {t("projects.title")}
+            </h2>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <ScrollReveal key={project.id} className={`delay-${index * 100}`}>
-              <Card className="bg-portfolio-dark border border-white/10 overflow-hidden h-full flex flex-col">
+            <ScrollReveal key={project.id} delay={index * 100}>
+              <article className="panel-dark flex h-full flex-col">
                 <div className="h-48 overflow-hidden">
                   <img
                     src={project.imageUrl}
                     alt={project.title}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-                <CardHeader className="p-6 pb-3">
-                  <CardTitle className="text-xl text-white">
+                <div className="flex flex-grow flex-col p-6">
+                  <h3 className="text-xl font-semibold text-white">
                     {project.title}
-                  </CardTitle>
-                  <CardDescription className="text-white/60 mt-2">
-                    {project.tech}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-6 pt-3 pb-6 flex-grow">
-                  <p className="text-white/80">{project.description}</p>
-                </CardContent>
-                <CardFooter className="p-6 pt-0 flex justify-between gap-4">
+                  </h3>
+                  <p className="mt-2 text-sm text-white/55">{project.tech}</p>
+                  <p className="mt-4 flex-grow text-white/75">
+                    {project.description}
+                  </p>
                   <Button
-                    variant="default"
-                    className="bg-portfolio-green hover:bg-portfolio-green/90 flex-1"
+                    className="mt-6 w-full bg-portfolio-green text-white hover:bg-portfolio-green/90"
                     onClick={() => window.open(project.projectUrl, "_blank")}
                   >
                     {t("projects.visit")}
                   </Button>
-                </CardFooter>
-              </Card>
+                </div>
+              </article>
             </ScrollReveal>
           ))}
         </div>
-        {/** this is hiddin projects.viewAll */}
-        <ScrollReveal className="text-center mt-12 md:mt-16 hidden">
-          <Button
-            variant="outline"
-            className="border-white/20 hover:bg-portfolio-green/90 hover:text-white text-black/85 px-8 py-3"
-            onClick={() => navigate("/AllProjectsPage")}
-          >
-            {t("projects.viewAll")}
-          </Button>
-        </ScrollReveal>
       </div>
     </section>
   );

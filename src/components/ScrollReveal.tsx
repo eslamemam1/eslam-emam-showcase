@@ -1,80 +1,65 @@
-
-import { useEffect, useRef, ReactNode } from 'react';
+import { useEffect, useRef, ReactNode } from "react";
 
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
   duration?: number;
-  direction?: 'up' | 'down' | 'left' | 'right' | 'none';
+  direction?: "up" | "down" | "left" | "right" | "none";
 }
 
-const ScrollReveal = ({ 
-  children, 
-  className = '', 
+const ScrollReveal = ({
+  children,
+  className = "",
   delay = 0,
-  duration = 500,
-  direction = 'up'
+  duration = 700,
+  direction = "up",
 }: ScrollRevealProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const transforms: Record<string, string> = {
+      up: "translate3d(0, 28px, 0)",
+      down: "translate3d(0, -28px, 0)",
+      left: "translate3d(28px, 0, 0)",
+      right: "translate3d(-28px, 0, 0)",
+      none: "none",
+    };
+
+    node.style.opacity = "0";
+    node.style.transform = transforms[direction];
+    node.style.transitionProperty = "opacity, transform";
+    node.style.transitionDuration = `${duration}ms`;
+    node.style.transitionTimingFunction = "cubic-bezier(0.22, 1, 0.36, 1)";
+    node.style.willChange = "opacity, transform";
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Add delay for staggered animations
-            setTimeout(() => {
-              entry.target.classList.add('active');
-            }, delay);
-            
-            // Unobserve after animation
-            observer.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+
+          window.setTimeout(() => {
+            entry.target.classList.add("active");
+            (entry.target as HTMLElement).style.opacity = "1";
+            (entry.target as HTMLElement).style.transform = "translate3d(0, 0, 0)";
+          }, delay);
+
+          observer.unobserve(entry.target);
         });
       },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
-      }
+      { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
     );
 
-    if (sectionRef.current) {
-      // Add custom animation styles based on direction
-      if (direction === 'up') {
-        sectionRef.current.style.transform = 'translateY(30px)';
-      } else if (direction === 'down') {
-        sectionRef.current.style.transform = 'translateY(-30px)';
-      } else if (direction === 'left') {
-        sectionRef.current.style.transform = 'translateX(30px)';
-      } else if (direction === 'right') {
-        sectionRef.current.style.transform = 'translateX(-30px)';
-      }
-      
-      // Set custom duration
-      sectionRef.current.style.transitionDuration = `${duration}ms`;
-      
-      // Start observing
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(node);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, [delay, duration, direction]);
 
   return (
-    <div 
-      ref={sectionRef} 
-      className={`reveal transition-all ease-out ${className}`}
-      style={{ 
-        transitionDelay: `${delay}ms`,
-        transitionProperty: 'transform, opacity'
-      }}
-    >
+    <div ref={sectionRef} className={`reveal ${className}`}>
       {children}
     </div>
   );
