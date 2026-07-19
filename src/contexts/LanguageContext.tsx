@@ -59,8 +59,8 @@ const translations = {
     "decritiopn.exp.title":
       "Software Engineer with a passion for creating impactful applications",
     // Projects Section
-    "projects.title": "Case Studies",
-    "projects.subtitle": "Some of my recent projects",
+    "projects.title": "Our Projects",
+    "projects.subtitle": "Some of our recent work",
     "projects.viewAll": "View All Projects",
     "projects.visit": "Visit Project",
     "projects.github": "View Code",
@@ -184,8 +184,8 @@ const translations = {
       "أتقن أطر عمل الواجهة الأمامية مثل React وAngular، بالإضافة إلى تقنيات الواجهة الخلفية مثل Node.js وExpress.js. لديّ خبرة في أنظمة قواعد البيانات، بما في ذلك MongoDB وSupabase وFirebase.",
     "decritiopn.exp.title": "مهندس برمجيات لديه شغف بإنشاء تطبيقات مؤثرة",
     // Projects Section
-    "projects.title": "دراسات الحالة",
-    "projects.subtitle": "بعض مشاريعي الحديثة",
+    "projects.title": "مشاريعنا",
+    "projects.subtitle": "بعض من أعمالنا الحديثة",
     "projects.viewAll": "عرض جميع المشاريع",
     "projects.visit": "زيارة المشروع",
     "projects.github": "عرض الكود",
