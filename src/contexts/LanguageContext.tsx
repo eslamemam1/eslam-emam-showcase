@@ -25,7 +25,7 @@ const translations = {
     "nav.home": "Home",
     "nav.about": "About",
     "nav.projects": "Projects",
-    "nav.testimonials": "Testimonials",
+    "nav.testimonials": "Clients",
     "nav.contact": "Contact",
 
     // Hero Section
@@ -96,8 +96,8 @@ const translations = {
     "project5.tech": "Angular.js, Tailwind Css",
 
     // Testimonials Section
-    "testimonials.title": "Testimonials",
-    "testimonials.subtitle": "What my clients say",
+    "testimonials.title": "Clients",
+    "testimonials.subtitle": "Companies I've worked with",
 
     // Testimonial 1
     "testimonial1.name": "Mohamed Slah",
@@ -151,7 +151,7 @@ const translations = {
     "nav.home": "الرئيسية",
     "nav.about": "عني",
     "nav.projects": "المشاريع",
-    "nav.testimonials": "الشهادات",
+    "nav.testimonials": "العملاء",
     "nav.contact": "اتصل بي",
 
     // Hero Section
@@ -221,8 +221,8 @@ const translations = {
     "project5.tech": "Angular.js, Tailwind Css",
 
     // Testimonials Section
-    "testimonials.title": "الشهادات",
-    "testimonials.subtitle": "ماذا يقول عملائي",
+    "testimonials.title": "العملاء",
+    "testimonials.subtitle": "شركات عملت معها",
 
     // Testimonial 1
     "testimonial1.name": "محمد صلاح",
