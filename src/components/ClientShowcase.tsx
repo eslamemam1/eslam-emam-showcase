@@ -1,4 +1,4 @@
-import { ArrowUpRight, Lock } from "lucide-react";
+import { ArrowUpRight, Lock, Server } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
 import { asset } from "@/lib/assets";
@@ -75,6 +75,15 @@ const ClientShowcase = ({ project, index }: { project: Project; index: number })
               </span>
             ))}
           </div>
+          {project.hosting && (
+            <p className="mt-5 flex flex-wrap items-center gap-2 text-sm text-white/50">
+              <Server className="h-4 w-4 text-portfolio-green" />
+              {isAr ? "الدومين والاستضافة:" : "Domain & hosting:"}
+              <span className="rounded-md bg-white/[0.06] px-2.5 py-0.5 font-medium text-white/80">
+                {project.hosting}
+              </span>
+            </p>
+          )}
           <a
             href={project.liveUrl}
             target="_blank"

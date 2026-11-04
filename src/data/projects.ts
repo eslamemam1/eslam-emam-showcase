@@ -11,6 +11,8 @@ export interface Project {
   image?: string;
   liveUrl?: string;
   githubUrl?: string;
+  /** Where the live site is hosted (client work). */
+  hosting?: string;
   /** Shown on the banner when there is no screenshot. */
   snippet?: string;
 }
@@ -31,6 +33,7 @@ export const projects: Project[] = [
     featured: true,
     image: "imges/caf.webp",
     liveUrl: "https://caf-sports.com/",
+    hosting: "Hostinger",
   },
   {
     id: "3lamko-bus",
@@ -44,6 +47,7 @@ export const projects: Project[] = [
     featured: true,
     image: "imges/3lamko.webp",
     liveUrl: "https://3lamko-bus.com/",
+    hosting: "Hostinger",
   },
   {
     id: "hurghada-vibes",
@@ -57,6 +61,7 @@ export const projects: Project[] = [
     featured: true,
     image: "imges/hurghada-vibes.webp",
     liveUrl: "https://www.hurghada-vibes-tours.com/",
+    hosting: "Hostinger",
   },
   {
     id: "holy-quran",

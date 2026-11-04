@@ -31,8 +31,8 @@ const steps = [
     icon: Rocket,
     title: { en: "Launch & Support", ar: "الإطلاق والدعم" },
     description: {
-      en: "Deployment on your domain, then fixes and improvements once you are live.",
-      ar: "نشر الموقع على الدومين الخاص بك، ثم إصلاحات وتحسينات بعد الإطلاق.",
+      en: "Domain, hosting and deployment (Hostinger, Vercel), then fixes and improvements once you are live.",
+      ar: "تجهيز الدومين والاستضافة ونشر الموقع (Hostinger و Vercel)، ثم إصلاحات وتحسينات بعد الإطلاق.",
     },
   },
 ];

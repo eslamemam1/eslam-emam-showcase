@@ -46,7 +46,7 @@ const skillCategories = [
     titleKey: "skills.tools",
     icon: Wrench,
     tone: "from-rose-500 to-pink-500",
-    items: ["Git", "GitHub", "Postman", "Figma", "Vite", "Cursor AI", "Claude"],
+    items: ["Git", "GitHub", "Postman", "Figma", "Vite", "Hostinger", "Vercel", "GitHub Pages", "Cursor AI", "Claude"],
   },
 ] as const;
 

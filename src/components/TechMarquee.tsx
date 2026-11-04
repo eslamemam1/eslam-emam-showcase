@@ -10,6 +10,8 @@ const items = [
   "Firebase",
   "WordPress",
   "Figma",
+  "Hostinger",
+  "Vercel",
   "Git",
   "Vite",
 ];

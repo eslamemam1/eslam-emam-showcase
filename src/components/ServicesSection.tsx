@@ -17,8 +17,8 @@ const services = [
     tone: "from-emerald-500 to-teal-500",
     title: { en: "Business Websites", ar: "مواقع تعريفية للشركات" },
     description: {
-      en: "Fast, responsive websites that present your brand and turn visitors into customers.",
-      ar: "مواقع سريعة ومتجاوبة تعرض هوية شركتك وتحوّل الزائرين إلى عملاء.",
+      en: "Fast, responsive websites on your own domain that present your brand and turn visitors into customers.",
+      ar: "مواقع سريعة ومتجاوبة على دومين خاص بك، تعرض هوية شركتك وتحوّل الزائرين إلى عملاء.",
     },
     tags: ["React", "Angular", "Tailwind CSS"],
   },
