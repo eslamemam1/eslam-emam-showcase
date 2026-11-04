@@ -81,7 +81,7 @@ const AboutSection = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section id="about" className="section bg-dots relative overflow-hidden bg-slate-50 pb-36 text-slate-900 md:pb-44">
+    <section id="about" className="section bg-dots relative overflow-hidden bg-slate-50 text-slate-900">
       <div className="glow-orb -right-24 top-0 h-80 w-80 bg-portfolio-green/10" />
       <div className="section-inner relative z-10">
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
@@ -169,14 +169,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 1440 80"
-        preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-14 w-full text-slate-950 md:h-20"
-      >
-        <path d="M0 80V40C240 0 480 0 720 28s480 44 720 4V80Z" fill="currentColor" />
-      </svg>
     </section>
   );
 };

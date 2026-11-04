@@ -9,7 +9,7 @@ const navItems = [
   { key: 'nav.about', href: '#about' },
   { key: 'nav.projects', href: '#projects' },
   { key: 'nav.github', href: '#github' },
-  { key: 'nav.journey', href: '#journey' },
+  { key: 'nav.reach', href: '#contact' },
 ];
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
       setProgress(max > 0 ? (window.scrollY / max) * 100 : 0);
 
       let current = '#home';
-      for (const href of [...navItems.map((i) => i.href), '#contact']) {
+      for (const href of navItems.map((i) => i.href)) {
         const el = document.querySelector(href);
         if (el && el.getBoundingClientRect().top <= 140) current = href;
       }

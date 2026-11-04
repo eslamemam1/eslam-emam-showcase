@@ -26,7 +26,7 @@ const translations = {
     "nav.about": "About",
     "nav.projects": "Client Work",
     "nav.github": "GitHub",
-    "nav.journey": "Journey",
+    "nav.reach": "Get in Touch",
     "nav.contact": "Contact",
 
     // Hero Section
@@ -156,7 +156,7 @@ const translations = {
     "nav.about": "عني",
     "nav.projects": "أعمال العملاء",
     "nav.github": "GitHub",
-    "nav.journey": "رحلتي",
+    "nav.reach": "تواصل معي",
     "nav.contact": "اتصل بي",
 
     // Hero Section
