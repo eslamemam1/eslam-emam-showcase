@@ -156,7 +156,7 @@ const HeroSection = () => {
                   <pre className="px-3 py-3 text-white/80">
                     <span className="text-purple-300">const</span>{" "}
                     <span className="text-sky-300">dev</span> = {"{"}
-                    {"\n  "}role: <span className="text-amber-300">"Full-Stack"</span>,
+                    {"\n  "}role: <span className="text-amber-300">"Frontend"</span>,
                     {"\n  "}front: [<span className="text-amber-300">"Angular"</span>,{" "}
                     <span className="text-amber-300">"React"</span>],
                     {"\n  "}back: <span className="text-amber-300">"Supabase"</span>,

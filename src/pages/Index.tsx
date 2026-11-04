@@ -13,12 +13,12 @@ import BackToTop from "../components/BackToTop";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Eslam Emam | Full Stack Engineer";
+    document.title = "Eslam Emam | Frontend Engineer";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Eslam Emam - Full Stack Engineer (Angular & React) portfolio showcasing projects, skills, and services."
+        "Eslam Emam - Frontend Engineer (Angular & React) portfolio showcasing projects, skills, and services."
       );
     }
   }, []);
