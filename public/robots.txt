@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://eslamemam1.github.io/eslam-emam-showcase/sitemap.xml

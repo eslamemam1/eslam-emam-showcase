@@ -133,7 +133,7 @@ const HeroSection = () => {
                 <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-portfolio-green/40 via-transparent to-teal-400/30 blur-2xl" />
                 <div className="relative h-60 w-60 overflow-hidden rounded-full border-2 border-portfolio-green/70 p-1.5 shadow-[0_20px_60px_-20px_rgba(16,185,129,0.55)] sm:h-72 sm:w-72 lg:h-80 lg:w-80">
                   <img
-                    src={asset("imges/me.jpg")}
+                    src={asset("imges/me.webp")}
                     alt="Eslam Emam"
                     className="h-full w-full rounded-full object-cover"
                     width={320}

@@ -29,7 +29,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS"],
     category: "client",
     featured: true,
-    image: "imges/caf.jpg",
+    image: "imges/caf.webp",
     liveUrl: "https://caf-sports.com/",
   },
   {
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Supabase"],
     category: "client",
     featured: true,
-    image: "imges/3lamko.jpg",
+    image: "imges/3lamko.webp",
     liveUrl: "https://3lamko-bus.com/",
   },
   {
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     tech: ["Angular", "Tailwind CSS"],
     category: "client",
     featured: true,
-    image: "imges/hurghada-vibes.jpg",
+    image: "imges/hurghada-vibes.webp",
     liveUrl: "https://www.hurghada-vibes-tours.com/",
   },
   {
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS"],
     category: "react",
     featured: true,
-    image: "imges/holyQoran.jpg",
+    image: "imges/holyQoran.webp",
     snippet: "const surahs = await getSurahs();\n<AudioPlayer src={recitation} />",
     liveUrl: pages("The-Holy-Quran-"),
     githubUrl: gh("The-Holy-Quran-"),
