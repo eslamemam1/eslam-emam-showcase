@@ -31,7 +31,7 @@ const translations = {
     // Hero Section
     "hero.greeting": "Hello, I'm",
     "hero.name": "Eslam Emam",
-    "hero.title": "Software Engineer",
+    "hero.title": "Full Stack Engineer · Angular & React",
     "hero.description":
       "a passionate Software Engineer crafting modern, responsive, and high-performance web applications.",
     "hero.cta": "View My Work",
@@ -64,6 +64,9 @@ const translations = {
     "projects.viewAll": "View All Projects",
     "projects.visit": "Visit Project",
     "projects.github": "View Code",
+    "projects.allTitle": "All Projects",
+    "projects.allSubtitle": "Client work, Angular & React apps, and responsive UI builds",
+    "projects.backToHome": "← Back to Home",
 
     // Project 1
     "project1.title": "Caf-Sports",
@@ -157,7 +160,7 @@ const translations = {
     // Hero Section
     "hero.greeting": "مرحباً، أنا",
     "hero.name": "إسلام إمام",
-    "hero.title": "مهندس برمجيات",
+    "hero.title": "مهندس Full Stack · Angular و React",
     "hero.description":
       "مرحبًا، أنا إسلام إمام — مهندس برمجيات شغوف، أصمم تطبيقات ويب حديثة ومتجاوبة وعالية الأداء.",
     "hero.cta": "تصفح أعمالي",
@@ -189,6 +192,9 @@ const translations = {
     "projects.viewAll": "عرض جميع المشاريع",
     "projects.visit": "زيارة المشروع",
     "projects.github": "عرض الكود",
+    "projects.allTitle": "جميع المشاريع",
+    "projects.allSubtitle": "أعمال العملاء وتطبيقات Angular و React وتصاميم واجهات متجاوبة",
+    "projects.backToHome": "← العودة للرئيسية",
 
     // Project 1
     "project1.title": "كاف سبورتس ",

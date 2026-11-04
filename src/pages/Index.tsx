@@ -14,7 +14,7 @@ const Index = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Eslam Emam - Full Stack Engineer portfolio showcasing projects, skills, and services."
+        "Eslam Emam - Full Stack Engineer (Angular & React) portfolio showcasing projects, skills, and services."
       );
     }
   }, []);
