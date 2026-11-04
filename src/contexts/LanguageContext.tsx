@@ -24,7 +24,8 @@ const translations = {
     // Navigation
     "nav.home": "Home",
     "nav.about": "About",
-    "nav.projects": "Projects",
+    "nav.projects": "Client Work",
+    "nav.github": "GitHub",
     "nav.testimonials": "Clients",
     "nav.contact": "Contact",
 
@@ -65,7 +66,7 @@ const translations = {
     "projects.visit": "Visit Project",
     "projects.github": "View Code",
     "projects.allTitle": "All Projects",
-    "projects.allSubtitle": "Client work, Angular & React apps, and responsive UI builds",
+    "projects.allSubtitle": "Angular & React apps and responsive UI builds, all public on GitHub",
     "projects.backToHome": "← Back to Home",
 
     // Project 1
@@ -153,7 +154,8 @@ const translations = {
     // Navigation
     "nav.home": "الرئيسية",
     "nav.about": "عني",
-    "nav.projects": "المشاريع",
+    "nav.projects": "أعمال العملاء",
+    "nav.github": "GitHub",
     "nav.testimonials": "العملاء",
     "nav.contact": "اتصل بي",
 
@@ -193,7 +195,7 @@ const translations = {
     "projects.visit": "زيارة المشروع",
     "projects.github": "عرض الكود",
     "projects.allTitle": "جميع المشاريع",
-    "projects.allSubtitle": "أعمال العملاء وتطبيقات Angular و React وتصاميم واجهات متجاوبة",
+    "projects.allSubtitle": "تطبيقات Angular و React وتصاميم واجهات متجاوبة، كلها مرفوعة على GitHub",
     "projects.backToHome": "← العودة للرئيسية",
 
     // Project 1

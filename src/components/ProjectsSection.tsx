@@ -1,47 +1,39 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, FolderGit2 } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
 import ProjectCard from "./ProjectCard";
-import { projects } from "@/data/projects";
+import { clientProjects } from "@/data/projects";
 
 const ProjectsSection = () => {
-  const { t, language } = useLanguage();
-  const featured = projects.filter((p) => p.featured);
+  const { language } = useLanguage();
+  const isAr = language === "ar";
 
   return (
     <section id="projects" className="section section-darker overflow-hidden">
-      <div className="section-inner relative z-10">
+      <div className="section-inner">
         <ScrollReveal>
           <div className="section-header">
             <span className="section-eyebrow-pill">
-              <FolderGit2 className="h-3.5 w-3.5" />
-              {t("projects.subtitle")}
+              <Briefcase className="h-3.5 w-3.5" />
+              {isAr ? "أعمال العملاء" : "Client Work"}
             </span>
-            <h2 className="section-title text-gradient mb-0">
-              {t("projects.title")}
+            <h2 className="section-title text-gradient mb-3">
+              {isAr ? "مشاريع حقيقية لعملاء حقيقيين" : "Real Projects for Real Clients"}
             </h2>
+            <p className="section-lead">
+              {isAr
+                ? "مواقع منشورة على دومينات خاصة بها، اشتغلت عليها وسلّمتها للعملاء."
+                : "Live websites on their own domains, built and delivered to clients."}
+            </p>
           </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-          {featured.map((project, index) => (
-            <ScrollReveal key={project.id} delay={(index % 3) * 100}>
-              <ProjectCard project={project} />
+          {clientProjects.map((project, index) => (
+            <ScrollReveal key={project.id} delay={index * 100}>
+              <ProjectCard project={project} variant="client" />
             </ScrollReveal>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Link
-            to="/AllProjectsPage"
-            className="inline-flex items-center gap-2 rounded-md bg-portfolio-green px-8 py-3 font-medium text-white transition-colors hover:bg-portfolio-green/90"
-          >
-            {t("projects.viewAll")} ({projects.length})
-            <ArrowRight
-              className={`h-4 w-4 ${language === "ar" ? "rotate-180" : ""}`}
-            />
-          </Link>
         </div>
       </div>
     </section>

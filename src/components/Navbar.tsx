@@ -8,6 +8,7 @@ const navItems = [
   { key: 'nav.home', href: '#home' },
   { key: 'nav.about', href: '#about' },
   { key: 'nav.projects', href: '#projects' },
+  { key: 'nav.github', href: '#github' },
   { key: 'nav.testimonials', href: '#testimonials' },
   { key: 'nav.contact', href: '#contact' },
 ];

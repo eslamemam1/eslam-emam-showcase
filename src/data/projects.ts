@@ -91,6 +91,7 @@ export const projects: Project[] = [
     },
     tech: ["Angular", "Tailwind CSS", "JWT", "Swagger API"],
     category: "angular",
+    featured: true,
     githubUrl: gh("jwt-token-app"),
   },
   {
@@ -102,6 +103,7 @@ export const projects: Project[] = [
     },
     tech: ["Angular", "RxJS", "Reactive Forms", "json-server"],
     category: "angular",
+    featured: true,
     githubUrl: gh("angular-crud-fake-api"),
   },
   {
@@ -135,6 +137,7 @@ export const projects: Project[] = [
     },
     tech: ["React", "Tailwind CSS", "amCharts 5", "React Router"],
     category: "react",
+    featured: true,
     githubUrl: gh("Motiv-Cars-App"),
   },
   {
@@ -146,6 +149,7 @@ export const projects: Project[] = [
     },
     tech: ["React", "json-server", "REST API"],
     category: "react",
+    featured: true,
     liveUrl: pages("Crud-React-App"),
     githubUrl: gh("Crud-React-App"),
   },
@@ -186,3 +190,11 @@ export const projects: Project[] = [
     githubUrl: gh("Responsive-Bootstrap-Website"),
   },
 ];
+
+export const clientProjects = projects.filter((p) => p.category === "client");
+export const githubProjects = projects.filter((p) => p.category !== "client");
+
+export const GITHUB_PROFILE = "https://github.com/eslamemam1";
+
+export const domainOf = (url?: string) =>
+  url ? new URL(url).hostname.replace(/^www\./, "") : "";

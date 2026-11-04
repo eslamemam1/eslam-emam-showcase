@@ -1,16 +1,22 @@
-import { ExternalLink, Github, Code2 } from "lucide-react";
+import { ExternalLink, Github, Code2, Globe, BadgeCheck } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { asset } from "@/lib/assets";
-import type { Project } from "@/data/projects";
+import { domainOf, type Project } from "@/data/projects";
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({
+  project,
+  variant = "github",
+}: {
+  project: Project;
+  variant?: "client" | "github";
+}) => {
   const { language } = useLanguage();
   const title = project.title[language];
   const isAr = language === "ar";
 
   return (
     <article className="panel-dark group flex h-full flex-col hover:-translate-y-1 hover:shadow-[0_20px_50px_-25px_rgba(16,185,129,0.5)]">
-      <div className="h-48 overflow-hidden">
+      <div className="relative h-48 overflow-hidden">
         {project.image ? (
           <img
             src={asset(project.image)}
@@ -27,9 +33,33 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </span>
           </div>
         )}
+        <span
+          dir="ltr"
+          className="absolute start-3 top-3 inline-flex max-w-[85%] items-center gap-1.5 truncate rounded-full border border-white/15 bg-slate-950/70 px-3 py-1 font-mono text-xs text-white/90 backdrop-blur"
+        >
+          {variant === "client" ? (
+            <>
+              <Globe className="h-3 w-3 text-portfolio-green" />
+              {domainOf(project.liveUrl)}
+            </>
+          ) : (
+            <>
+              <Github className="h-3 w-3 text-portfolio-green" />
+              eslamemam1/{project.githubUrl?.split("/").pop()}
+            </>
+          )}
+        </span>
       </div>
       <div className="flex flex-grow flex-col p-6">
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
+        <h3 className="flex items-center gap-2 text-xl font-semibold text-white">
+          {title}
+          {variant === "client" && (
+            <BadgeCheck
+              className="h-5 w-5 shrink-0 text-portfolio-green"
+              aria-label={isAr ? "مشروع عميل" : "Client project"}
+            />
+          )}
+        </h3>
         <div className="mt-3 flex flex-wrap gap-2">
           {project.tech.map((tech) => (
             <span

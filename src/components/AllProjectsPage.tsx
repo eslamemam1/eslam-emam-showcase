@@ -4,13 +4,12 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
 import ProjectCard from "./ProjectCard";
-import { projects, type ProjectCategory } from "@/data/projects";
+import { githubProjects as projects, type ProjectCategory } from "@/data/projects";
 
 type Filter = "all" | ProjectCategory;
 
 const filters: { key: Filter; en: string; ar: string }[] = [
   { key: "all", en: "All", ar: "الكل" },
-  { key: "client", en: "Client Work", ar: "أعمال العملاء" },
   { key: "react", en: "React", ar: "React" },
   { key: "angular", en: "Angular", ar: "Angular" },
   { key: "ui", en: "UI / Landing Pages", ar: "واجهات وصفحات هبوط" },
