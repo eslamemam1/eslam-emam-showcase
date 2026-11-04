@@ -1,43 +1,41 @@
-# Welcome to your project
+# Eslam Emam, Portfolio
 
-## How can I edit this code?
+Personal portfolio of **Eslam Emam**, a Frontend Engineer (Angular, React, TypeScript) based in Cairo, Egypt.
 
-There are several ways of editing your application.
+**Live site:** https://eslamemam1.github.io/eslam-emam-showcase
+
+## What's on the site
+
+- Hero and about sections
+- Services and the way I work with clients
+- Selected projects and recent client work
+- GitHub projects pulled into cards
+- Tech stack and contact section
+
+The site is responsive, supports keyboard navigation, and ships with a sitemap and SEO metadata.
+
+## Tech stack
+
+- [Vite](https://vitejs.dev/) + [React](https://react.dev/) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) and [shadcn/ui](https://ui.shadcn.com/)
+- React Router and TanStack Query
+- Deployed to GitHub Pages with GitHub Actions
+
+## Run locally
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+```
 
-**Use GitHub Codespaces**
+Pushing to `main` deploys the site through the workflow in `.github/workflows`.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contact
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+[LinkedIn](https://www.linkedin.com/in/eslam-emam-12695815b) · [GitHub](https://github.com/eslamemam1) · [YouTube](https://www.youtube.com/@eslamemam5214)
