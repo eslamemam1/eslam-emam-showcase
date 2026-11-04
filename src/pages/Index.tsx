@@ -6,6 +6,8 @@ import ProjectsSection from "../components/ProjectsSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import TechMarquee from "../components/TechMarquee";
+import BackToTop from "../components/BackToTop";
 
 const Index = () => {
   useEffect(() => {
@@ -24,12 +26,14 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
+        <TechMarquee />
         <AboutSection />
         <ProjectsSection />
         <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };

@@ -27,14 +27,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-portfolio-dark py-16 text-white">
-      <div className="section-inner">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-slate-950 px-4 py-16 text-white sm:px-6 md:px-8 lg:px-12">
+      <div className="glow-orb -left-24 bottom-0 h-64 w-64 bg-portfolio-green/10" />
+      <div className="section-inner relative z-10">
         <ScrollReveal>
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
             <div>
               <a href="#home" className="text-2xl font-bold">
                 {t("Eslam")}
-                <span className="text-portfolio-green"> {t("Emam")}</span>
+                <span className="text-gradient"> {t("Emam")}</span>
               </a>
               <p className="mt-4 max-w-md text-white/60">{t("footer.des")}</p>
               <div className="mt-6 flex flex-wrap gap-4">

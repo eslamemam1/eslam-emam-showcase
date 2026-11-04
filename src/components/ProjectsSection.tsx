@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FolderGit2 } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
 import ProjectCard from "./ProjectCard";
@@ -10,12 +10,15 @@ const ProjectsSection = () => {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="section section-dark">
-      <div className="section-inner">
+    <section id="projects" className="section section-darker overflow-hidden">
+      <div className="section-inner relative z-10">
         <ScrollReveal>
           <div className="section-header">
-            <p className="section-eyebrow">{t("projects.subtitle")}</p>
-            <h2 className="section-title mb-0 text-white">
+            <span className="section-eyebrow-pill">
+              <FolderGit2 className="h-3.5 w-3.5" />
+              {t("projects.subtitle")}
+            </span>
+            <h2 className="section-title text-gradient mb-0">
               {t("projects.title")}
             </h2>
           </div>

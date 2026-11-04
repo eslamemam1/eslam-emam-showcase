@@ -110,6 +110,16 @@ html {
   50% { transform: translateY(-10px); }
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 @keyframes blink {
   50% { opacity: 0; }
 }
@@ -219,6 +229,26 @@ html {
 
   .text-gradient {
     @apply bg-gradient-to-r from-portfolio-green via-emerald-300 to-teal-300 bg-clip-text text-transparent;
+  }
+
+  .skill-chip-dark {
+    @apply inline-block rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1 font-mono text-xs text-white/80 transition-colors hover:border-portfolio-green/50 hover:text-portfolio-green;
+  }
+
+  .section-darker {
+    @apply relative bg-slate-950 text-portfolio-light;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(16, 185, 129, 0.12), transparent 70%),
+      repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 22px);
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(rgba(15, 23, 42, 0.09) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+
+  .section-eyebrow-pill {
+    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-portfolio-green/30 bg-portfolio-green/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-portfolio-green;
   }
 
   .glass {
