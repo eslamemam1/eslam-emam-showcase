@@ -35,7 +35,7 @@ const translations = {
     "hero.name": "Eslam Emam",
     "hero.title": "Full Stack Engineer",
     "hero.description":
-      "a passionate Software Engineer crafting modern, responsive, and high-performance web applications.",
+      "I build modern, responsive, and high-performance web applications, from the interface to the database.",
     "hero.cta": "View My Work",
     "hero.contact": "Contact Me",
 
@@ -166,7 +166,7 @@ const translations = {
     "hero.name": "إسلام إمام",
     "hero.title": "مهندس Full Stack",
     "hero.description":
-      "مرحبًا، أنا إسلام إمام — مهندس برمجيات شغوف، أصمم تطبيقات ويب حديثة ومتجاوبة وعالية الأداء.",
+      "أبني تطبيقات ويب حديثة ومتجاوبة وعالية الأداء، من الواجهة حتى قاعدة البيانات.",
     "hero.cta": "تصفح أعمالي",
     "hero.contact": "اتصل بي",
 

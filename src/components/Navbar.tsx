@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Languages, Menu, X } from 'lucide-react';
 
 const navItems = [
   { key: 'nav.home', href: '#home' },
@@ -39,6 +39,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setIsMenuOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isMenuOpen]);
+
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'ar' : 'en');
   };
@@ -50,7 +57,7 @@ const Navbar = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-portfolio-dark/80 backdrop-blur-xl py-2 border-b border-white/10' : 'bg-transparent py-4'
+        isScrolled || isMenuOpen ? 'bg-portfolio-dark/95 backdrop-blur-xl py-2 border-b border-white/10' : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
@@ -98,8 +105,9 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white/80 hover:text-portfolio-green"
+            className="-me-2 rounded-lg p-2 text-white/80 hover:text-portfolio-green md:hidden"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
             onClick={toggleMenu}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -114,42 +122,55 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+        className={`grid transition-all duration-300 md:hidden ${
+          isMenuOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
         }`}
+        aria-hidden={!isMenuOpen}
       >
-        <div className="bg-portfolio-dark/95 backdrop-blur-md px-4 py-6 flex flex-col space-y-4">
-          {navItems.map((item) => (
-            <a
-              key={item.key}
-              href={item.href}
-              className="text-white/80 hover:text-portfolio-green py-2 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t(item.key)}
-            </a>
-          ))}
-          <div className="flex items-center justify-between pt-4 border-t border-white/10">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="text-white/80 hover:text-portfolio-green"
-            >
-              {language === 'en' ? 'عربي' : 'English'}
-            </Button>
-            
-            <Button 
-              variant="default" 
-              size="sm"
-              className="bg-portfolio-green hover:bg-portfolio-green/90 text-white"
-              onClick={() => {
-                window.location.href = '#contact';
-                setIsMenuOpen(false);
-              }}
-            >
-              {t('nav.contact')}
-            </Button>
+        <div className="overflow-hidden">
+          <div className="mx-3 mb-3 mt-2 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-2xl border border-white/10 bg-slate-950/95 p-3 shadow-2xl backdrop-blur-xl">
+            <nav className="flex flex-col gap-1">
+              {navItems
+                .filter((item) => item.href !== '#contact')
+                .map((item) => (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    tabIndex={isMenuOpen ? 0 : -1}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`flex items-center justify-between rounded-lg px-4 py-3 text-base transition-colors ${
+                      active === item.href
+                        ? 'bg-portfolio-green/15 font-medium text-white'
+                        : 'text-white/75 hover:bg-white/5 hover:text-white'
+                    }`}
+                  >
+                    {t(item.key)}
+                    {active === item.href && (
+                      <span className="h-2 w-2 rounded-full bg-portfolio-green" />
+                    )}
+                  </a>
+                ))}
+            </nav>
+
+            <div className="mt-3 grid grid-cols-2 gap-3 border-t border-white/10 pt-3">
+              <button
+                type="button"
+                tabIndex={isMenuOpen ? 0 : -1}
+                onClick={toggleLanguage}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/25 bg-white/5 px-4 py-3 font-medium text-white transition-colors hover:border-portfolio-green hover:bg-white/10"
+              >
+                <Languages className="h-4 w-4 text-portfolio-green" />
+                {language === 'en' ? 'عربي' : 'English'}
+              </button>
+              <a
+                href="#contact"
+                tabIndex={isMenuOpen ? 0 : -1}
+                onClick={() => setIsMenuOpen(false)}
+                className="inline-flex items-center justify-center rounded-lg bg-portfolio-green px-4 py-3 font-medium text-white shadow-[0_8px_24px_-10px_rgba(16,185,129,0.8)] transition-colors hover:bg-emerald-400"
+              >
+                {t('nav.contact')}
+              </a>
+            </div>
           </div>
         </div>
       </div>
