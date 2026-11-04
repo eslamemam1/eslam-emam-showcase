@@ -64,7 +64,6 @@ const ProcessSection = () => {
         </ScrollReveal>
 
         <div className="relative mx-auto max-w-6xl">
-          <div className="absolute inset-x-[12.5%] top-0 hidden h-px bg-gradient-to-r from-transparent via-portfolio-green/50 to-transparent lg:block" />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <ScrollReveal key={step.title.en} delay={index * 120}>

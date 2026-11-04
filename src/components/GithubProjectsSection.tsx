@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Github, GitFork, Terminal } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Github } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
 import RepoCard from "./RepoCard";
@@ -35,13 +35,23 @@ const GithubProjectsSection = () => {
       <div className="section-inner relative z-10">
         <ScrollReveal>
           <div className="section-header">
-            <span
+            <a
+              href={GITHUB_PROFILE}
+              target="_blank"
+              rel="noopener noreferrer"
               dir="ltr"
-              className="mb-4 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-xs text-portfolio-green"
+              className="group mb-5 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] py-1.5 pe-4 ps-1.5 backdrop-blur transition-all duration-300 hover:border-portfolio-green/50 hover:bg-white/[0.07]"
             >
-              <Terminal className="h-3.5 w-3.5" />
-              ~/github/eslamemam1
-            </span>
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-portfolio-green to-teal-500 text-white shadow-lg transition-transform duration-300 group-hover:rotate-12">
+                <Github className="h-4 w-4" />
+              </span>
+              <span className="text-sm font-medium text-white">eslamemam1</span>
+              <span className="h-4 w-px bg-white/15" />
+              <span className="font-mono text-xs text-portfolio-green">
+                {githubProjects.length} repositories
+              </span>
+              <ArrowUpRight className="h-3.5 w-3.5 text-white/40 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-portfolio-green" />
+            </a>
             <h2 className="section-title mb-3 text-white">
               {isAr ? "مشاريع التعلّم والتطوير" : "Learning & Practice Projects"}
             </h2>
@@ -54,7 +64,7 @@ const GithubProjectsSection = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <div className="mx-auto mb-10 flex max-w-6xl flex-col items-center justify-between gap-5 sm:flex-row">
+          <div className="mx-auto mb-10 flex max-w-6xl justify-center">
             <div className="flex flex-wrap justify-center gap-2" role="tablist">
               {tabs.map((tab) => (
                 <button
@@ -82,15 +92,6 @@ const GithubProjectsSection = () => {
                 </button>
               ))}
             </div>
-            <a
-              href={GITHUB_PROFILE}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-portfolio-green"
-            >
-              <GitFork className="h-4 w-4" />
-              {isAr ? "كل الـ repositories على GitHub" : "All repositories on GitHub"}
-            </a>
           </div>
         </ScrollReveal>
 
