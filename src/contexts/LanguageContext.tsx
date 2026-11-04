@@ -26,6 +26,7 @@ const translations = {
     "nav.about": "About",
     "nav.projects": "Client Work",
     "nav.github": "GitHub",
+    "nav.services": "Services",
     "nav.reach": "Get in Touch",
     "nav.contact": "Contact",
 
@@ -156,6 +157,7 @@ const translations = {
     "nav.about": "عني",
     "nav.projects": "أعمال العملاء",
     "nav.github": "GitHub",
+    "nav.services": "خدماتي",
     "nav.reach": "تواصل معي",
     "nav.contact": "اتصل بي",
 

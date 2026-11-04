@@ -7,6 +7,7 @@ const quickLinks = [
   { key: "nav.about", href: "#about" },
   { key: "nav.projects", href: "#projects" },
   { key: "nav.github", href: "#github" },
+  { key: "nav.services", href: "#services" },
   { key: "nav.contact", href: "#contact" },
 ];
 

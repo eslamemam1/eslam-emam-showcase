@@ -4,6 +4,8 @@ import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import ProjectsSection from "../components/ProjectsSection";
 import GithubProjectsSection from "../components/GithubProjectsSection";
+import ServicesSection from "../components/ServicesSection";
+import ProcessSection from "../components/ProcessSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import TechMarquee from "../components/TechMarquee";
@@ -30,6 +32,8 @@ const Index = () => {
         <AboutSection />
         <ProjectsSection />
         <GithubProjectsSection />
+        <ServicesSection />
+        <ProcessSection />
         <ContactSection />
       </main>
       <Footer />
