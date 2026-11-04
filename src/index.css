@@ -238,7 +238,7 @@ html {
   .section-darker {
     @apply relative bg-slate-950 text-portfolio-light;
     background-image:
-      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(16, 185, 129, 0.12), transparent 70%),
+      radial-gradient(ellipse 70% 40% at 50% 12%, rgba(16, 185, 129, 0.10), transparent 70%),
       repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 22px);
   }
 

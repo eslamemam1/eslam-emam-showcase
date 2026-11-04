@@ -1,7 +1,7 @@
 import { Briefcase } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
-import ProjectCard from "./ProjectCard";
+import ClientShowcase from "./ClientShowcase";
 import { clientProjects } from "@/data/projects";
 
 const ProjectsSection = () => {
@@ -28,11 +28,9 @@ const ProjectsSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <div className="mx-auto max-w-6xl space-y-20 md:space-y-28">
           {clientProjects.map((project, index) => (
-            <ScrollReveal key={project.id} delay={index * 100}>
-              <ProjectCard project={project} variant="client" />
-            </ScrollReveal>
+            <ClientShowcase key={project.id} project={project} index={index} />
           ))}
         </div>
       </div>

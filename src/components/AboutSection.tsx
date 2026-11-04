@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
+import Bidi from "./Bidi";
 import { asset } from "@/lib/assets";
 
 const skillCategories = [
@@ -80,7 +81,7 @@ const AboutSection = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section id="about" className="section bg-dots relative overflow-hidden bg-slate-50 text-slate-900">
+    <section id="about" className="section bg-dots relative overflow-hidden bg-slate-50 pb-36 text-slate-900 md:pb-44">
       <div className="glow-orb -right-24 top-0 h-80 w-80 bg-portfolio-green/10" />
       <div className="section-inner relative z-10">
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
@@ -94,8 +95,8 @@ const AboutSection = () => {
               <h2 className="mb-5 text-3xl font-bold leading-tight text-slate-900 md:text-4xl lg:text-5xl">
                 {t("decritiopn.exp.title")}
               </h2>
-              <p className="mb-4 text-lg leading-relaxed text-slate-600">{t("description.exp")}</p>
-              <p className="mb-8 leading-relaxed text-slate-500">{t("decritiopn.tec")}</p>
+              <p className="mb-4 text-lg leading-relaxed text-slate-600"><Bidi text={t("description.exp")} /></p>
+              <p className="mb-8 leading-relaxed text-slate-500"><Bidi text={t("decritiopn.tec")} /></p>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#projects"
@@ -123,8 +124,8 @@ const AboutSection = () => {
                   <span className={`mb-4 inline-flex rounded-xl p-3 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 ${h.tone}`}>
                     <h.icon className="h-6 w-6" />
                   </span>
-                  <h3 className="mb-2 text-lg font-semibold text-slate-900">{h[language][0]}</h3>
-                  <p className="text-sm leading-relaxed text-slate-500">{h[language][1]}</p>
+                  <h3 className="mb-2 text-lg font-semibold text-slate-900"><Bidi text={h[language][0]} /></h3>
+                  <p className="text-sm leading-relaxed text-slate-500"><Bidi text={h[language][1]} /></p>
                 </div>
               </ScrollReveal>
             ))}
@@ -168,6 +169,14 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        className="absolute inset-x-0 bottom-0 h-14 w-full text-slate-950 md:h-20"
+      >
+        <path d="M0 80V40C240 0 480 0 720 28s480 44 720 4V80Z" fill="currentColor" />
+      </svg>
     </section>
   );
 };

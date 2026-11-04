@@ -7,7 +7,7 @@ const quickLinks = [
   { key: "nav.about", href: "#about" },
   { key: "nav.projects", href: "#projects" },
   { key: "nav.github", href: "#github" },
-  { key: "nav.testimonials", href: "#testimonials" },
+  { key: "nav.journey", href: "#journey" },
   { key: "nav.contact", href: "#contact" },
 ];
 
@@ -59,17 +59,14 @@ const Footer = () => {
           </div>
         </ScrollReveal>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-sm text-white/50 md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pb-14 pt-6 text-sm text-white/50 md:flex-row md:pb-0 md:pe-16">
           <p>
             &copy; {currentYear} Eslam Emam. {t("footer.rights")}
           </p>
           <p dir="ltr" className="font-mono text-xs">
             Built with React · TypeScript · Tailwind
           </p>
-          <p>
-            {t("footer.madeWith")}{" "}
-            <span className="inline-block animate-pulse text-portfolio-green">♥</span>
-          </p>
+          <p>{t("footer.madeWith")}</p>
         </div>
       </div>
     </footer>

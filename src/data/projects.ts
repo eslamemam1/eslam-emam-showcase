@@ -11,6 +11,8 @@ export interface Project {
   image?: string;
   liveUrl?: string;
   githubUrl?: string;
+  /** Shown on the banner when there is no screenshot. */
+  snippet?: string;
 }
 
 const gh = (repo: string) => `https://github.com/eslamemam1/${repo}`;
@@ -67,6 +69,7 @@ export const projects: Project[] = [
     category: "react",
     featured: true,
     image: "imges/holyQoran.jpg",
+    snippet: "const surahs = await getSurahs();\n<AudioPlayer src={recitation} />",
     liveUrl: pages("The-Holy-Quran-"),
     githubUrl: gh("The-Holy-Quran-"),
   },
@@ -81,6 +84,7 @@ export const projects: Project[] = [
     category: "angular",
     featured: true,
     githubUrl: gh("doctor-booking-system"),
+    snippet: "{ path: 'appointments',\n  canActivate: [authGuard],\n  component: Dashboard }",
   },
   {
     id: "jwt-dashboard",
@@ -93,6 +97,7 @@ export const projects: Project[] = [
     category: "angular",
     featured: true,
     githubUrl: gh("jwt-token-app"),
+    snippet: "headers: {\n  Authorization:\n    `Bearer ${token}`\n}",
   },
   {
     id: "task-manager",
@@ -105,6 +110,7 @@ export const projects: Project[] = [
     category: "angular",
     featured: true,
     githubUrl: gh("angular-crud-fake-api"),
+    snippet: "tasks$ = this.http\n  .get<Task[]>('/tasks')\n  .pipe(shareReplay(1));",
   },
   {
     id: "booking-management",
@@ -116,6 +122,7 @@ export const projects: Project[] = [
     tech: ["Angular", "TypeScript"],
     category: "angular",
     githubUrl: gh("booking-management-system"),
+    snippet: "@Component({\n  standalone: true,\n  selector: 'app-booking'\n})",
   },
   {
     id: "seat-map",
@@ -127,6 +134,7 @@ export const projects: Project[] = [
     tech: ["Angular", "TypeScript"],
     category: "angular",
     githubUrl: gh("Seat-Map"),
+    snippet: "@Component({\n  standalone: true,\n  selector: 'app-seat-map'\n})",
   },
   {
     id: "motiv-cars",
@@ -139,6 +147,7 @@ export const projects: Project[] = [
     category: "react",
     featured: true,
     githubUrl: gh("Motiv-Cars-App"),
+    snippet: "<CircularProgressbar\n  value={72}\n  text=\"72%\" />",
   },
   {
     id: "crud-react",
@@ -152,6 +161,7 @@ export const projects: Project[] = [
     featured: true,
     liveUrl: pages("Crud-React-App"),
     githubUrl: gh("Crud-React-App"),
+    snippet: "const { data } = await\n  axios.get('/posts');\nsetPosts(data);",
   },
   {
     id: "ticketing-system",
@@ -164,6 +174,7 @@ export const projects: Project[] = [
     category: "react",
     liveUrl: pages("ticketing-system"),
     githubUrl: gh("ticketing-system"),
+    snippet: "const [tickets, setTickets] =\n  useState([]);",
   },
   {
     id: "adventure-agency",
@@ -176,6 +187,7 @@ export const projects: Project[] = [
     category: "ui",
     liveUrl: pages("Adventure-Agency"),
     githubUrl: gh("Adventure-Agency"),
+    snippet: "@media (max-width: 768px) {\n  .hero { flex-direction: column; }\n}",
   },
   {
     id: "responsive-bootstrap",
@@ -188,6 +200,7 @@ export const projects: Project[] = [
     category: "ui",
     liveUrl: pages("Responsive-Bootstrap-Website"),
     githubUrl: gh("Responsive-Bootstrap-Website"),
+    snippet: "<div class=\"row g-4\">\n  <div class=\"col-md-4\">…</div>\n</div>",
   },
 ];
 

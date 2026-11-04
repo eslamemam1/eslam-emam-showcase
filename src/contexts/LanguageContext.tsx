@@ -26,7 +26,7 @@ const translations = {
     "nav.about": "About",
     "nav.projects": "Client Work",
     "nav.github": "GitHub",
-    "nav.testimonials": "Clients",
+    "nav.journey": "Journey",
     "nav.contact": "Contact",
 
     // Hero Section
@@ -56,7 +56,7 @@ const translations = {
     "description.exp":
       "With over 3 years of experience in web development, I specialize in building scalable and performant applications using modern technologies. My goal is to create software that not only meets technical requirements but also delivers an exceptional user experience.",
     "decritiopn.tec":
-      " I'm proficient in front-end frameworks like React and Angular, as well as back-end technologies like Node.js and Express.js. I have experience with databasesystems including MongoDB, Supabase, and Firebase.",
+      " I'm proficient in front-end frameworks like React and Angular, as well as back-end technologies like Node.js and Express.js. I have experience with database systems including PostgreSQL, Supabase, and Firebase.",
     "decritiopn.exp.title":
       "Software Engineer with a passion for creating impactful applications",
     // Projects Section
@@ -156,7 +156,7 @@ const translations = {
     "nav.about": "عني",
     "nav.projects": "أعمال العملاء",
     "nav.github": "GitHub",
-    "nav.testimonials": "العملاء",
+    "nav.journey": "رحلتي",
     "nav.contact": "اتصل بي",
 
     // Hero Section
@@ -186,7 +186,7 @@ const translations = {
     "description.exp":
       "بخبرة تزيد عن ثلاث سنوات في تطوير الويب، أتخصص في بناء تطبيقات قابلة للتطوير وعالية الأداء باستخدام التقنيات الحديثة. هدفي هو إنشاء برامج لا تلبي المتطلبات التقنية فحسب، بل توفر أيضًا تجربة مستخدم استثنائية.",
     "decritiopn.tec":
-      "أتقن أطر عمل الواجهة الأمامية مثل React وAngular، بالإضافة إلى تقنيات الواجهة الخلفية مثل Node.js وExpress.js. لديّ خبرة في أنظمة قواعد البيانات، بما في ذلك MongoDB وSupabase وFirebase.",
+      "أتقن أطر عمل الواجهة الأمامية مثل React وAngular، بالإضافة إلى تقنيات الواجهة الخلفية مثل Node.js وExpress.js. لديّ خبرة في أنظمة قواعد البيانات، بما في ذلك PostgreSQL وSupabase وFirebase.",
     "decritiopn.exp.title": "مهندس برمجيات لديه شغف بإنشاء تطبيقات مؤثرة",
     // Projects Section
     "projects.title": "مشاريعنا",

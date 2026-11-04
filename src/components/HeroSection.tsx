@@ -1,6 +1,7 @@
 import { ArrowDown, Download, Github, Linkedin } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
+import CountUp from "./CountUp";
 import { asset } from "@/lib/assets";
 import { projects } from "@/data/projects";
 
@@ -19,9 +20,9 @@ const HeroSection = () => {
   const isAr = language === "ar";
 
   const stats = [
-    { value: "3+", label: isAr ? "سنوات خبرة" : "Years Experience" },
-    { value: `${projects.length}`, label: isAr ? "مشروع" : "Projects" },
-    { value: "3", label: isAr ? "عملاء" : "Live Clients" },
+    { value: 3, suffix: "+", label: isAr ? "سنوات خبرة" : "Years Experience" },
+    { value: projects.length, suffix: "", label: isAr ? "مشروع" : "Projects" },
+    { value: 3, suffix: "", label: isAr ? "عملاء" : "Live Clients" },
   ];
 
   return (
@@ -116,7 +117,9 @@ const HeroSection = () => {
               <dl className="flex gap-8 border-t border-white/10 pt-6 sm:gap-12">
                 {stats.map((s) => (
                   <div key={s.label}>
-                    <dt className="text-3xl font-bold text-white">{s.value}</dt>
+                    <dt className="text-3xl font-bold text-white">
+                      <CountUp to={s.value} suffix={s.suffix} />
+                    </dt>
                     <dd className="mt-1 text-sm text-white/55">{s.label}</dd>
                   </div>
                 ))}

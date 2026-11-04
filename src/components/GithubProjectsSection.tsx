@@ -1,14 +1,32 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Github, Terminal } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, Github, GitFork, Terminal } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import ScrollReveal from "./ScrollReveal";
-import ProjectCard from "./ProjectCard";
-import { githubProjects, GITHUB_PROFILE } from "@/data/projects";
+import RepoCard from "./RepoCard";
+import { githubProjects, GITHUB_PROFILE, type ProjectCategory } from "@/data/projects";
+
+type Filter = "all" | ProjectCategory;
+
+const tabs: { key: Filter; en: string; ar: string }[] = [
+  { key: "all", en: "All", ar: "الكل" },
+  { key: "angular", en: "Angular", ar: "Angular" },
+  { key: "react", en: "React", ar: "React" },
+  { key: "ui", en: "UI", ar: "واجهات" },
+];
+
+const INITIAL = 6;
 
 const GithubProjectsSection = () => {
   const { language } = useLanguage();
   const isAr = language === "ar";
-  const featured = githubProjects.filter((p) => p.featured);
+  const [filter, setFilter] = useState<Filter>("all");
+  const [expanded, setExpanded] = useState(false);
+
+  const filtered =
+    filter === "all" ? githubProjects : githubProjects.filter((p) => p.category === filter);
+  const visible = expanded ? filtered : filtered.slice(0, INITIAL);
+  const count = (key: Filter) =>
+    key === "all" ? githubProjects.length : githubProjects.filter((p) => p.category === key).length;
 
   return (
     <section id="github" className="section section-dark overflow-hidden">
@@ -35,22 +53,77 @@ const GithubProjectsSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-          {featured.map((project, index) => (
-            <ScrollReveal key={project.id} delay={(index % 3) * 100}>
-              <ProjectCard project={project} variant="github" />
-            </ScrollReveal>
+        <ScrollReveal delay={100}>
+          <div className="mx-auto mb-10 flex max-w-6xl flex-col items-center justify-between gap-5 sm:flex-row">
+            <div className="flex flex-wrap justify-center gap-2" role="tablist">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.key}
+                  role="tab"
+                  aria-selected={filter === tab.key}
+                  onClick={() => {
+                    setFilter(tab.key);
+                    setExpanded(false);
+                  }}
+                  className={`inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm transition-all duration-300 ${
+                    filter === tab.key
+                      ? "border-portfolio-green bg-portfolio-green text-white shadow-[0_8px_24px_-10px_rgba(16,185,129,0.8)]"
+                      : "border-white/10 bg-white/[0.03] text-white/70 hover:border-portfolio-green/50 hover:text-white"
+                  }`}
+                >
+                  {tab[language]}
+                  <span
+                    className={`rounded px-1.5 font-mono text-xs ${
+                      filter === tab.key ? "bg-white/20" : "bg-white/10 text-white/50"
+                    }`}
+                  >
+                    {count(tab.key)}
+                  </span>
+                </button>
+              ))}
+            </div>
+            <a
+              href={GITHUB_PROFILE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-portfolio-green"
+            >
+              <GitFork className="h-4 w-4" />
+              {isAr ? "كل الـ repositories على GitHub" : "All repositories on GitHub"}
+            </a>
+          </div>
+        </ScrollReveal>
+
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {visible.map((project, index) => (
+            <div
+              key={`${filter}-${project.id}`}
+              className="animate-fade-in opacity-0"
+              style={{ animationDelay: `${(index % 6) * 70}ms` }}
+            >
+              <RepoCard project={project} />
+            </div>
           ))}
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <Link
-            to="/AllProjectsPage"
-            className="group inline-flex items-center gap-2 rounded-lg bg-portfolio-green px-7 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgba(16,185,129,0.7)] transition-all hover:-translate-y-0.5 hover:bg-emerald-400"
-          >
-            {isAr ? "كل المشاريع" : "All Projects"} ({githubProjects.length})
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-          </Link>
+          {filtered.length > INITIAL && (
+            <button
+              onClick={() => setExpanded((v) => !v)}
+              className="group inline-flex items-center gap-2 rounded-lg bg-portfolio-green px-7 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgba(16,185,129,0.7)] transition-all hover:-translate-y-0.5 hover:bg-emerald-400"
+            >
+              {expanded
+                ? isAr
+                  ? "عرض أقل"
+                  : "Show less"
+                : isAr
+                  ? `عرض الكل (${filtered.length})`
+                  : `Show all (${filtered.length})`}
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
+              />
+            </button>
+          )}
           <a
             href={GITHUB_PROFILE}
             target="_blank"

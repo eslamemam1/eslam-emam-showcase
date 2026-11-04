@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
-import ProjectCard from "./ProjectCard";
+import RepoCard from "./RepoCard";
 import { githubProjects as projects, type ProjectCategory } from "@/data/projects";
 
 type Filter = "all" | ProjectCategory;
@@ -58,7 +58,7 @@ const AllProjectsPage = () => {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
             {visible.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <RepoCard key={project.id} project={project} />
             ))}
           </div>
 
