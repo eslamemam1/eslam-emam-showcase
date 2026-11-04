@@ -4,7 +4,15 @@ import ScrollReveal from "./ScrollReveal";
 import { asset } from "@/lib/assets";
 import { projects } from "@/data/projects";
 
-const techStack = ["Angular", "React", "TypeScript", "RxJS", "Tailwind CSS"];
+const techStack = [
+  "Angular",
+  "React",
+  "TypeScript",
+  "RxJS",
+  "Tailwind CSS",
+  "Supabase",
+  "PostgreSQL",
+];
 
 const HeroSection = () => {
   const { t, language } = useLanguage();
@@ -134,7 +142,7 @@ const HeroSection = () => {
 
                 <div
                   dir="ltr"
-                  className="code-window absolute -bottom-6 -left-4 hidden w-56 text-left sm:block lg:-left-14"
+                  className="code-window absolute -bottom-6 -left-4 hidden w-72 text-left sm:block lg:-left-14"
                   style={{ animation: "float-y 6s ease-in-out infinite" }}
                 >
                   <div className="flex items-center gap-1.5 border-b border-white/10 px-3 py-2">
@@ -146,9 +154,10 @@ const HeroSection = () => {
                     <span className="text-purple-300">const</span>{" "}
                     <span className="text-sky-300">dev</span> = {"{"}
                     {"\n  "}role: <span className="text-amber-300">"Full-Stack"</span>,
-                    {"\n  "}stack: [<span className="text-amber-300">"NG"</span>,{" "}
+                    {"\n  "}front: [<span className="text-amber-300">"Angular"</span>,{" "}
                     <span className="text-amber-300">"React"</span>],
-                    {"\n  "}coffee: <span className="text-portfolio-green">true</span>
+                    {"\n  "}back: <span className="text-amber-300">"Supabase"</span>,
+                    {"\n  "}db: <span className="text-amber-300">"PostgreSQL"</span>
                     {"\n"}
                     {"}"}
                     <span

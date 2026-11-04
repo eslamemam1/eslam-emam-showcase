@@ -39,7 +39,7 @@ const skillCategories = [
     titleKey: "skills.backend",
     icon: Server,
     tone: "from-amber-500 to-orange-500",
-    items: ["Node.js", "Express.js", "C#", "Firebase", "Supabase"],
+    items: ["Node.js", "Express.js", "C#", "Firebase", "Supabase", "PostgreSQL"],
   },
   {
     titleKey: "skills.tools",

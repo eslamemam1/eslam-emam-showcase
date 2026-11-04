@@ -32,7 +32,7 @@ const translations = {
     // Hero Section
     "hero.greeting": "Hello, I'm",
     "hero.name": "Eslam Emam",
-    "hero.title": "Full Stack Engineer · Angular & React",
+    "hero.title": "Full Stack Engineer",
     "hero.description":
       "a passionate Software Engineer crafting modern, responsive, and high-performance web applications.",
     "hero.cta": "View My Work",
@@ -162,7 +162,7 @@ const translations = {
     // Hero Section
     "hero.greeting": "مرحباً، أنا",
     "hero.name": "إسلام إمام",
-    "hero.title": "مهندس Full Stack · Angular و React",
+    "hero.title": "مهندس Full Stack",
     "hero.description":
       "مرحبًا، أنا إسلام إمام — مهندس برمجيات شغوف، أصمم تطبيقات ويب حديثة ومتجاوبة وعالية الأداء.",
     "hero.cta": "تصفح أعمالي",

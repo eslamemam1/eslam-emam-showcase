@@ -6,6 +6,7 @@ const items = [
   "Tailwind CSS",
   "Node.js",
   "Supabase",
+  "PostgreSQL",
   "Firebase",
   "WordPress",
   "Figma",
