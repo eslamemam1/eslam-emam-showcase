@@ -33,7 +33,8 @@ const translations = {
     // Hero Section
     "hero.greeting": "Hello, I'm",
     "hero.name": "Eslam Emam",
-    "hero.title": "Frontend Engineer",
+    "hero.title": "Software Engineer",
+    "hero.subtitle": "Full Stack",
     "hero.description":
       "I build modern, responsive, and high-performance web applications, from the interface to the database.",
     "hero.cta": "View My Work",
@@ -164,7 +165,8 @@ const translations = {
     // Hero Section
     "hero.greeting": "مرحباً، أنا",
     "hero.name": "إسلام إمام",
-    "hero.title": "مهندس Frontend",
+    "hero.title": "مهندس برمجيات",
+    "hero.subtitle": "Full Stack",
     "hero.description":
       "أبني تطبيقات ويب حديثة ومتجاوبة وعالية الأداء، من الواجهة حتى قاعدة البيانات.",
     "hero.cta": "تصفح أعمالي",

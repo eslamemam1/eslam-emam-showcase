@@ -52,8 +52,14 @@ const HeroSection = () => {
               <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
                 <span className="text-gradient">{t("hero.name")}</span>
               </h1>
-              <h2 className="mt-4 text-2xl font-medium text-white/90 md:text-3xl">
+              <h2 className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-2xl font-medium text-white/90 md:text-3xl">
                 {t("hero.title")}
+                <span
+                  dir="ltr"
+                  className="rounded-md border border-portfolio-green/40 bg-portfolio-green/10 px-3 py-1 font-mono text-sm font-medium text-portfolio-green md:text-base"
+                >
+                  {t("hero.subtitle")}
+                </span>
               </h2>
             </ScrollReveal>
 
